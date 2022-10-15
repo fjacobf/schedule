@@ -61,6 +61,24 @@ build CMakeFiles/schedule.dir/Aula.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Use
   OBJECT_DIR = CMakeFiles\schedule.dir
   OBJECT_FILE_DIR = CMakeFiles\schedule.dir
 
+build CMakeFiles/schedule.dir/Student.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Users/user/Desktop/facul/FEUP/3S/AED/tabalho1/schedule/Student.cpp || cmake_object_order_depends_target_schedule
+  DEP_FILE = CMakeFiles\schedule.dir\Student.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\schedule.dir
+  OBJECT_FILE_DIR = CMakeFiles\schedule.dir
+
+build CMakeFiles/schedule.dir/Turma.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Users/user/Desktop/facul/FEUP/3S/AED/tabalho1/schedule/Turma.cpp || cmake_object_order_depends_target_schedule
+  DEP_FILE = CMakeFiles\schedule.dir\Turma.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\schedule.dir
+  OBJECT_FILE_DIR = CMakeFiles\schedule.dir
+
+build CMakeFiles/schedule.dir/Horario.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Users/user/Desktop/facul/FEUP/3S/AED/tabalho1/schedule/Horario.cpp || cmake_object_order_depends_target_schedule
+  DEP_FILE = CMakeFiles\schedule.dir\Horario.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\schedule.dir
+  OBJECT_FILE_DIR = CMakeFiles\schedule.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target schedule
@@ -69,7 +87,7 @@ build CMakeFiles/schedule.dir/Aula.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Use
 #############################################
 # Link the executable schedule.exe
 
-build schedule.exe: CXX_EXECUTABLE_LINKER__schedule_Debug CMakeFiles/schedule.dir/main.cpp.obj CMakeFiles/schedule.dir/Aula.cpp.obj
+build schedule.exe: CXX_EXECUTABLE_LINKER__schedule_Debug CMakeFiles/schedule.dir/main.cpp.obj CMakeFiles/schedule.dir/Aula.cpp.obj CMakeFiles/schedule.dir/Student.cpp.obj CMakeFiles/schedule.dir/Turma.cpp.obj CMakeFiles/schedule.dir/Horario.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\schedule.dir
