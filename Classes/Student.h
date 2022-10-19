@@ -1,15 +1,17 @@
 #ifndef SCHEDULE_STUDENT_H
 #define SCHEDULE_STUDENT_H
 #include <string>
-#include "Horario.h"
-
+#include "Class.h"
 using namespace std;
+
+//Um estudante é identificado por um código e nome, e
+//tem um horário associado.
 
 class Student {
 private:
-    int studentCode;
+    long int studentCode;
     string studentName;
-    Horario horario;
+    list <Class> classes;
 public:
 };
 

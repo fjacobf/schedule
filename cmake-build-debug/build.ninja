@@ -55,29 +55,41 @@ build CMakeFiles/schedule.dir/main.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Use
   OBJECT_DIR = CMakeFiles\schedule.dir
   OBJECT_FILE_DIR = CMakeFiles\schedule.dir
 
-build CMakeFiles/schedule.dir/Aula.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Users/user/Desktop/facul/FEUP/3S/AED/tabalho1/schedule/Aula.cpp || cmake_object_order_depends_target_schedule
-  DEP_FILE = CMakeFiles\schedule.dir\Aula.cpp.obj.d
+build CMakeFiles/schedule.dir/Classes/Class.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Users/user/Desktop/facul/FEUP/3S/AED/tabalho1/schedule/Classes/Class.cpp || cmake_object_order_depends_target_schedule
+  DEP_FILE = CMakeFiles\schedule.dir\Classes\Class.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\schedule.dir
-  OBJECT_FILE_DIR = CMakeFiles\schedule.dir
+  OBJECT_FILE_DIR = CMakeFiles\schedule.dir\Classes
 
-build CMakeFiles/schedule.dir/Student.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Users/user/Desktop/facul/FEUP/3S/AED/tabalho1/schedule/Student.cpp || cmake_object_order_depends_target_schedule
-  DEP_FILE = CMakeFiles\schedule.dir\Student.cpp.obj.d
+build CMakeFiles/schedule.dir/Classes/Student.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Users/user/Desktop/facul/FEUP/3S/AED/tabalho1/schedule/Classes/Student.cpp || cmake_object_order_depends_target_schedule
+  DEP_FILE = CMakeFiles\schedule.dir\Classes\Student.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\schedule.dir
-  OBJECT_FILE_DIR = CMakeFiles\schedule.dir
+  OBJECT_FILE_DIR = CMakeFiles\schedule.dir\Classes
 
-build CMakeFiles/schedule.dir/Turma.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Users/user/Desktop/facul/FEUP/3S/AED/tabalho1/schedule/Turma.cpp || cmake_object_order_depends_target_schedule
-  DEP_FILE = CMakeFiles\schedule.dir\Turma.cpp.obj.d
+build CMakeFiles/schedule.dir/Classes/Turma.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Users/user/Desktop/facul/FEUP/3S/AED/tabalho1/schedule/Classes/Turma.cpp || cmake_object_order_depends_target_schedule
+  DEP_FILE = CMakeFiles\schedule.dir\Classes\Turma.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\schedule.dir
-  OBJECT_FILE_DIR = CMakeFiles\schedule.dir
+  OBJECT_FILE_DIR = CMakeFiles\schedule.dir\Classes
 
-build CMakeFiles/schedule.dir/Horario.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Users/user/Desktop/facul/FEUP/3S/AED/tabalho1/schedule/Horario.cpp || cmake_object_order_depends_target_schedule
-  DEP_FILE = CMakeFiles\schedule.dir\Horario.cpp.obj.d
+build CMakeFiles/schedule.dir/Classes/Horario.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Users/user/Desktop/facul/FEUP/3S/AED/tabalho1/schedule/Classes/Horario.cpp || cmake_object_order_depends_target_schedule
+  DEP_FILE = CMakeFiles\schedule.dir\Classes\Horario.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\schedule.dir
-  OBJECT_FILE_DIR = CMakeFiles\schedule.dir
+  OBJECT_FILE_DIR = CMakeFiles\schedule.dir\Classes
+
+build CMakeFiles/schedule.dir/Classes/App.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Users/user/Desktop/facul/FEUP/3S/AED/tabalho1/schedule/Classes/App.cpp || cmake_object_order_depends_target_schedule
+  DEP_FILE = CMakeFiles\schedule.dir\Classes\App.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\schedule.dir
+  OBJECT_FILE_DIR = CMakeFiles\schedule.dir\Classes
+
+build CMakeFiles/schedule.dir/Classes/Uc.cpp.obj: CXX_COMPILER__schedule_Debug C$:/Users/user/Desktop/facul/FEUP/3S/AED/tabalho1/schedule/Classes/Uc.cpp || cmake_object_order_depends_target_schedule
+  DEP_FILE = CMakeFiles\schedule.dir\Classes\Uc.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\schedule.dir
+  OBJECT_FILE_DIR = CMakeFiles\schedule.dir\Classes
 
 
 # =============================================================================
@@ -87,7 +99,7 @@ build CMakeFiles/schedule.dir/Horario.cpp.obj: CXX_COMPILER__schedule_Debug C$:/
 #############################################
 # Link the executable schedule.exe
 
-build schedule.exe: CXX_EXECUTABLE_LINKER__schedule_Debug CMakeFiles/schedule.dir/main.cpp.obj CMakeFiles/schedule.dir/Aula.cpp.obj CMakeFiles/schedule.dir/Student.cpp.obj CMakeFiles/schedule.dir/Turma.cpp.obj CMakeFiles/schedule.dir/Horario.cpp.obj
+build schedule.exe: CXX_EXECUTABLE_LINKER__schedule_Debug CMakeFiles/schedule.dir/main.cpp.obj CMakeFiles/schedule.dir/Classes/Class.cpp.obj CMakeFiles/schedule.dir/Classes/Student.cpp.obj CMakeFiles/schedule.dir/Classes/Turma.cpp.obj CMakeFiles/schedule.dir/Classes/Horario.cpp.obj CMakeFiles/schedule.dir/Classes/App.cpp.obj CMakeFiles/schedule.dir/Classes/Uc.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\schedule.dir
