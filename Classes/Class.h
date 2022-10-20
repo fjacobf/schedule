@@ -13,6 +13,16 @@ private:
         string classCode;
         list<Time_slot> time_slots;
 public:
+
+    int getCapacity();
+    string getClassCode();
+    string getUcCode();
+    list<Time_slot> getTimeSlots();
+    void setCapacity(int c);
+    void setClassCode(string code);
+    void setUcCode(string code);
+    void setTimeSlots(list<Time_slot> list);
+
 };
 
 

@@ -13,6 +13,14 @@ private:
     string studentName;
     list <Class> classes;
 public:
+
+    long int getcode();
+    string getname();
+    list<Class> getclasses();
+    void setcode(long int n);
+    void setname(string n);
+    void setclasses(list<Class> list);
+
 };
 
 

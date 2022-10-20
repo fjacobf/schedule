@@ -14,6 +14,15 @@ private:
 
 public:
 
+    string getweekday();
+    float getstarthour();
+    float getduration();
+    string gettype();
+    void setweekday(string n);
+    void setstarthour(float a);
+    void setduration(float a);
+    void settype(string t);
+
 };
 
 
