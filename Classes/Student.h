@@ -3,9 +3,9 @@
 #include <string>
 #include "Class.h"
 using namespace std;
-
-//Um estudante é identificado por um código e nome, e
-//tem um horário associado.
+///Classe para os Estudantes.
+///
+///Um estudante é identificado por um código e nome, e tem um horário associado.
 
 class Student {
 private:
