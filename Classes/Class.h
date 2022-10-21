@@ -3,9 +3,10 @@
 #include <string>
 #include "Time_slot.h"
 #include "list"
-//Uma turma é identificada por um código e tem um horário associado
 using namespace std;
-
+///Classe para as Turmas.
+///
+///Uma turma é identificada por um código e tem um horário associado.
 class Class {
 private:
         int capacity;
@@ -14,13 +15,22 @@ private:
         list<Time_slot> time_slots;
 public:
 
+
+    ///@returns capacity
     int getCapacity();
+    ///@returns Classcode
     string getClassCode();
+    ///@returns UcCode
     string getUcCode();
+    ///@returns Time slots
     list<Time_slot> getTimeSlots();
+    ///set capacity with @param c
     void setCapacity(int c);
+    /// set classCode with @param code
     void setClassCode(string code);
+    /// set UcCode with @param code
     void setUcCode(string code);
+    /// set time_slots with @param list
     void setTimeSlots(list<Time_slot> list);
 
 };

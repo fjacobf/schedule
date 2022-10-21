@@ -2,9 +2,9 @@
 #define SCHEDULE_TIME_SLOT_H
 #include <string>
 using namespace std;
-//Conceptualmente, uma aula é identificada por um código da UC, dia da semana, hora de início, duração e
-//tipo (T/TP/PL).
-
+/// Classe para o tempo de cada aula.
+///
+///Conceptualmente, uma aula é identificada por um código da UC, dia da semana, hora de início, duração e tipo (T/TP/PL).
 class Time_slot {
 private:
     string weekday;
