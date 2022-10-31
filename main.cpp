@@ -1,8 +1,8 @@
 #include <iostream>
-#include "Classes/DataBase.h"
+#include "Classes/Read.h"
 using namespace std;
 int main() {
-    DataBase read;
+    Read read;
     read.run();
     return 0;
 }

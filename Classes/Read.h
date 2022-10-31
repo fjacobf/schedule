@@ -2,8 +2,8 @@
 // Created by Utilizador on 31-Oct-22.
 //
 
-#ifndef SCHEDULE_DATABASE_H
-#define SCHEDULE_DATABASE_H
+#ifndef SCHEDULE_READ_H
+#define SCHEDULE_READ_H
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -15,13 +15,15 @@
 
 using namespace std;
 
-class DataBase {
-private:
-    UcList uclist;
+class Read {
 public:
+<<<<<<< HEAD:Classes/DataBase.h
     UcList run();
     DataBase();
+=======
+    void run();
+>>>>>>> parent of 16d8be1 (Did somepart of the database):Classes/Read.h
 };
 
 
-#endif //SCHEDULE_DATABASE_H
+#endif //SCHEDULE_READ_H
