@@ -2,11 +2,11 @@
 // Created by Utilizador on 31-Oct-22.
 //
 
-#include "Read.h"
+#include "Database.h"
 
 
 
-void Read::run() {
+ UcList Database::run() {
     UcList uclist;
     string fclasses = "D:\\AED\\schedule\\arquivos\\classes.csv";
     vector<vector<string>> content;
@@ -60,6 +60,9 @@ void Read::run() {
 
 
     }
+    return uclist;
 }
 
-DataBase::DataBase() {}
+Database::Database() {
+    uclist = run();
+}

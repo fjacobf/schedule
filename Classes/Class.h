@@ -32,6 +32,10 @@ public:
     void setUcCode(string code);
     /// set time_slots with @param list
     void setTimeSlots(list<Time_slot> list);
+    ///Insert a new time_slot with @param timeSlot
+    void insertTimeSlot(Time_slot timeSlot);
+    /// creates a new  class Classes
+    Class(int c, string ucCode, string ClassCode, Time_slot timeSlot);
 
 };
 

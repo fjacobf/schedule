@@ -35,3 +35,14 @@ void Class::setUcCode(string code) {
 void Class::setTimeSlots(list<Time_slot> list) {
     time_slots = list;
 }
+
+void Class::insertTimeSlot(Time_slot timeSlot) {
+    time_slots.push_back(timeSlot);
+}
+
+Class::Class(int c, string ucCode, string ClassCode, Time_slot timeSlot) {
+    setCapacity(c);
+    setUcCode(ucCode);
+    setClassCode(ClassCode);
+    insertTimeSlot(timeSlot);
+}

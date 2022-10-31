@@ -22,6 +22,7 @@ public:
     void setstarthour(float a);
     void setduration(float a);
     void settype(string t);
+    Time_slot(string type, float duration, float startHour, string weekday);
 
 };
 

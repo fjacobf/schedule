@@ -1,9 +1,7 @@
 #include <iostream>
-=======
-#include "Classes/Read.h"
+#include "Classes/Database.h"
 using namespace std;
 int main() {
-    Read read;
-    read.run();
+    Database read();
     return 0;
 }
