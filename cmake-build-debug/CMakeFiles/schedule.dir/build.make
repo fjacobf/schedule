@@ -117,12 +117,54 @@ CMakeFiles/schedule.dir/Classes/Class.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/schedule.dir/Classes/Class.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\AED\schedule\Classes\Class.cpp -o CMakeFiles\schedule.dir\Classes\Class.cpp.s
 
+CMakeFiles/schedule.dir/Classes/Read.cpp.obj: CMakeFiles/schedule.dir/flags.make
+CMakeFiles/schedule.dir/Classes/Read.cpp.obj: ../Classes/Read.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\AED\schedule\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/schedule.dir/Classes/Read.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\schedule.dir\Classes\Read.cpp.obj -c D:\AED\schedule\Classes\Read.cpp
+
+CMakeFiles/schedule.dir/Classes/Read.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/schedule.dir/Classes/Read.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\AED\schedule\Classes\Read.cpp > CMakeFiles\schedule.dir\Classes\Read.cpp.i
+
+CMakeFiles/schedule.dir/Classes/Read.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/schedule.dir/Classes/Read.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\AED\schedule\Classes\Read.cpp -o CMakeFiles\schedule.dir\Classes\Read.cpp.s
+
+CMakeFiles/schedule.dir/Classes/Uc.cpp.obj: CMakeFiles/schedule.dir/flags.make
+CMakeFiles/schedule.dir/Classes/Uc.cpp.obj: ../Classes/Uc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\AED\schedule\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/schedule.dir/Classes/Uc.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\schedule.dir\Classes\Uc.cpp.obj -c D:\AED\schedule\Classes\Uc.cpp
+
+CMakeFiles/schedule.dir/Classes/Uc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/schedule.dir/Classes/Uc.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\AED\schedule\Classes\Uc.cpp > CMakeFiles\schedule.dir\Classes\Uc.cpp.i
+
+CMakeFiles/schedule.dir/Classes/Uc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/schedule.dir/Classes/Uc.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\AED\schedule\Classes\Uc.cpp -o CMakeFiles\schedule.dir\Classes\Uc.cpp.s
+
+CMakeFiles/schedule.dir/Classes/UcList.cpp.obj: CMakeFiles/schedule.dir/flags.make
+CMakeFiles/schedule.dir/Classes/UcList.cpp.obj: ../Classes/UcList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\AED\schedule\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/schedule.dir/Classes/UcList.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\schedule.dir\Classes\UcList.cpp.obj -c D:\AED\schedule\Classes\UcList.cpp
+
+CMakeFiles/schedule.dir/Classes/UcList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/schedule.dir/Classes/UcList.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\AED\schedule\Classes\UcList.cpp > CMakeFiles\schedule.dir\Classes\UcList.cpp.i
+
+CMakeFiles/schedule.dir/Classes/UcList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/schedule.dir/Classes/UcList.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\AED\schedule\Classes\UcList.cpp -o CMakeFiles\schedule.dir\Classes\UcList.cpp.s
+
 # Object files for target schedule
 schedule_OBJECTS = \
 "CMakeFiles/schedule.dir/main.cpp.obj" \
 "CMakeFiles/schedule.dir/Classes/Time_slot.cpp.obj" \
 "CMakeFiles/schedule.dir/Classes/Student.cpp.obj" \
-"CMakeFiles/schedule.dir/Classes/Class.cpp.obj"
+"CMakeFiles/schedule.dir/Classes/Class.cpp.obj" \
+"CMakeFiles/schedule.dir/Classes/Read.cpp.obj" \
+"CMakeFiles/schedule.dir/Classes/Uc.cpp.obj" \
+"CMakeFiles/schedule.dir/Classes/UcList.cpp.obj"
 
 # External object files for target schedule
 schedule_EXTERNAL_OBJECTS =
@@ -131,11 +173,14 @@ schedule.exe: CMakeFiles/schedule.dir/main.cpp.obj
 schedule.exe: CMakeFiles/schedule.dir/Classes/Time_slot.cpp.obj
 schedule.exe: CMakeFiles/schedule.dir/Classes/Student.cpp.obj
 schedule.exe: CMakeFiles/schedule.dir/Classes/Class.cpp.obj
+schedule.exe: CMakeFiles/schedule.dir/Classes/Read.cpp.obj
+schedule.exe: CMakeFiles/schedule.dir/Classes/Uc.cpp.obj
+schedule.exe: CMakeFiles/schedule.dir/Classes/UcList.cpp.obj
 schedule.exe: CMakeFiles/schedule.dir/build.make
 schedule.exe: CMakeFiles/schedule.dir/linklibs.rsp
 schedule.exe: CMakeFiles/schedule.dir/objects1.rsp
 schedule.exe: CMakeFiles/schedule.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\AED\schedule\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable schedule.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\AED\schedule\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable schedule.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\schedule.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

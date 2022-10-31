@@ -9,8 +9,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/AED/schedule/Classes/Class.cpp" "D:/AED/schedule/cmake-build-debug/CMakeFiles/schedule.dir/Classes/Class.cpp.obj"
+  "D:/AED/schedule/Classes/Read.cpp" "D:/AED/schedule/cmake-build-debug/CMakeFiles/schedule.dir/Classes/Read.cpp.obj"
   "D:/AED/schedule/Classes/Student.cpp" "D:/AED/schedule/cmake-build-debug/CMakeFiles/schedule.dir/Classes/Student.cpp.obj"
   "D:/AED/schedule/Classes/Time_slot.cpp" "D:/AED/schedule/cmake-build-debug/CMakeFiles/schedule.dir/Classes/Time_slot.cpp.obj"
+  "D:/AED/schedule/Classes/Uc.cpp" "D:/AED/schedule/cmake-build-debug/CMakeFiles/schedule.dir/Classes/Uc.cpp.obj"
+  "D:/AED/schedule/Classes/UcList.cpp" "D:/AED/schedule/cmake-build-debug/CMakeFiles/schedule.dir/Classes/UcList.cpp.obj"
   "D:/AED/schedule/main.cpp" "D:/AED/schedule/cmake-build-debug/CMakeFiles/schedule.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

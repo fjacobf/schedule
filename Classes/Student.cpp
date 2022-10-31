@@ -27,3 +27,7 @@ void Student::setname(string n) {
 void Student::setclasses(list<Class> list) {
     classes=list;
 }
+
+void Student::insertClass(Class a) {
+    classes.push_back(a);
+}

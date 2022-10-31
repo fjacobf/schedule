@@ -152,6 +152,30 @@ Classes/Class.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/Class.cpp.s
 .PHONY : Classes/Class.cpp.s
 
+Classes/Read.obj: Classes/Read.cpp.obj
+.PHONY : Classes/Read.obj
+
+# target to build an object file
+Classes/Read.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/Read.cpp.obj
+.PHONY : Classes/Read.cpp.obj
+
+Classes/Read.i: Classes/Read.cpp.i
+.PHONY : Classes/Read.i
+
+# target to preprocess a source file
+Classes/Read.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/Read.cpp.i
+.PHONY : Classes/Read.cpp.i
+
+Classes/Read.s: Classes/Read.cpp.s
+.PHONY : Classes/Read.s
+
+# target to generate assembly for a file
+Classes/Read.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/Read.cpp.s
+.PHONY : Classes/Read.cpp.s
+
 Classes/Student.obj: Classes/Student.cpp.obj
 .PHONY : Classes/Student.obj
 
@@ -200,6 +224,54 @@ Classes/Time_slot.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/Time_slot.cpp.s
 .PHONY : Classes/Time_slot.cpp.s
 
+Classes/Uc.obj: Classes/Uc.cpp.obj
+.PHONY : Classes/Uc.obj
+
+# target to build an object file
+Classes/Uc.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/Uc.cpp.obj
+.PHONY : Classes/Uc.cpp.obj
+
+Classes/Uc.i: Classes/Uc.cpp.i
+.PHONY : Classes/Uc.i
+
+# target to preprocess a source file
+Classes/Uc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/Uc.cpp.i
+.PHONY : Classes/Uc.cpp.i
+
+Classes/Uc.s: Classes/Uc.cpp.s
+.PHONY : Classes/Uc.s
+
+# target to generate assembly for a file
+Classes/Uc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/Uc.cpp.s
+.PHONY : Classes/Uc.cpp.s
+
+Classes/UcList.obj: Classes/UcList.cpp.obj
+.PHONY : Classes/UcList.obj
+
+# target to build an object file
+Classes/UcList.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/UcList.cpp.obj
+.PHONY : Classes/UcList.cpp.obj
+
+Classes/UcList.i: Classes/UcList.cpp.i
+.PHONY : Classes/UcList.i
+
+# target to preprocess a source file
+Classes/UcList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/UcList.cpp.i
+.PHONY : Classes/UcList.cpp.i
+
+Classes/UcList.s: Classes/UcList.cpp.s
+.PHONY : Classes/UcList.s
+
+# target to generate assembly for a file
+Classes/UcList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/UcList.cpp.s
+.PHONY : Classes/UcList.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -236,12 +308,21 @@ help:
 	@echo ... Classes/Class.obj
 	@echo ... Classes/Class.i
 	@echo ... Classes/Class.s
+	@echo ... Classes/Read.obj
+	@echo ... Classes/Read.i
+	@echo ... Classes/Read.s
 	@echo ... Classes/Student.obj
 	@echo ... Classes/Student.i
 	@echo ... Classes/Student.s
 	@echo ... Classes/Time_slot.obj
 	@echo ... Classes/Time_slot.i
 	@echo ... Classes/Time_slot.s
+	@echo ... Classes/Uc.obj
+	@echo ... Classes/Uc.i
+	@echo ... Classes/Uc.s
+	@echo ... Classes/UcList.obj
+	@echo ... Classes/UcList.i
+	@echo ... Classes/UcList.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

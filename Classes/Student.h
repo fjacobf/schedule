@@ -20,6 +20,7 @@ public:
     void setcode(long int n);
     void setname(string n);
     void setclasses(list<Class> list);
+    void insertClass(Class a);
 
 };
 
