@@ -15,7 +15,3 @@ bool UcList::exists(Uc uni) {
     }
     return false;
 }
-
-list<Uc> UcList::getlist() {
-    return Ucs;
-}
