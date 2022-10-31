@@ -13,6 +13,7 @@ private:
 public:
    void setUc(Uc uni);
    bool exists(Uc uni);
+   list<Uc> getlist();
 };
 
 

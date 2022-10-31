@@ -15,3 +15,19 @@ void Uc::insertClass(Class classes) {
 string Uc::getUcCode() {
     return Uccode;
 }
+
+Uc::Uc() {
+
+}
+
+void Uc::SetUcCode(string code) {
+    Uccode = code;
+}
+
+void Uc::eraselist() {
+    Classes.clear();
+}
+
+list<Class> Uc::getList() {
+    return Classes;
+}

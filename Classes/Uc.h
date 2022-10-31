@@ -15,6 +15,11 @@ public:
     Uc(string uccode);
     void insertClass(Class classes);
     string getUcCode();
+    void SetUcCode(string code);
+    void eraselist();
+    list<Class> getList();
+
+    Uc();
 };
 
 
