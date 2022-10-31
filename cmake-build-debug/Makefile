@@ -152,29 +152,29 @@ Classes/Class.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/Class.cpp.s
 .PHONY : Classes/Class.cpp.s
 
-Classes/Read.obj: Classes/Read.cpp.obj
-.PHONY : Classes/Read.obj
+Classes/DataBase.obj: Classes/DataBase.cpp.obj
+.PHONY : Classes/DataBase.obj
 
 # target to build an object file
-Classes/Read.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/Read.cpp.obj
-.PHONY : Classes/Read.cpp.obj
+Classes/DataBase.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/DataBase.cpp.obj
+.PHONY : Classes/DataBase.cpp.obj
 
-Classes/Read.i: Classes/Read.cpp.i
-.PHONY : Classes/Read.i
+Classes/DataBase.i: Classes/DataBase.cpp.i
+.PHONY : Classes/DataBase.i
 
 # target to preprocess a source file
-Classes/Read.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/Read.cpp.i
-.PHONY : Classes/Read.cpp.i
+Classes/DataBase.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/DataBase.cpp.i
+.PHONY : Classes/DataBase.cpp.i
 
-Classes/Read.s: Classes/Read.cpp.s
-.PHONY : Classes/Read.s
+Classes/DataBase.s: Classes/DataBase.cpp.s
+.PHONY : Classes/DataBase.s
 
 # target to generate assembly for a file
-Classes/Read.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/Read.cpp.s
-.PHONY : Classes/Read.cpp.s
+Classes/DataBase.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\schedule.dir\build.make CMakeFiles/schedule.dir/Classes/DataBase.cpp.s
+.PHONY : Classes/DataBase.cpp.s
 
 Classes/Student.obj: Classes/Student.cpp.obj
 .PHONY : Classes/Student.obj
@@ -308,9 +308,9 @@ help:
 	@echo ... Classes/Class.obj
 	@echo ... Classes/Class.i
 	@echo ... Classes/Class.s
-	@echo ... Classes/Read.obj
-	@echo ... Classes/Read.i
-	@echo ... Classes/Read.s
+	@echo ... Classes/DataBase.obj
+	@echo ... Classes/DataBase.i
+	@echo ... Classes/DataBase.s
 	@echo ... Classes/Student.obj
 	@echo ... Classes/Student.i
 	@echo ... Classes/Student.s

@@ -5,10 +5,10 @@ CMakeFiles/schedule.dir/Classes/Class.cpp.obj: \
  ../Classes/Class.cpp \
  ../Classes/Class.h \
  ../Classes/Time_slot.h
-CMakeFiles/schedule.dir/Classes/Read.cpp.obj: \
+CMakeFiles/schedule.dir/Classes/DataBase.cpp.obj: \
  ../Classes/Class.h \
- ../Classes/Read.cpp \
- ../Classes/Read.h \
+ ../Classes/DataBase.cpp \
+ ../Classes/DataBase.h \
  ../Classes/Time_slot.h \
  ../Classes/Uc.h \
  ../Classes/UcList.h
@@ -33,7 +33,7 @@ CMakeFiles/schedule.dir/Classes/UcList.cpp.obj: \
  ../Classes/UcList.h
 CMakeFiles/schedule.dir/main.cpp.obj: \
  ../Classes/Class.h \
- ../Classes/Read.h \
+ ../Classes/DataBase.h \
  ../Classes/Time_slot.h \
  ../Classes/Uc.h \
  ../Classes/UcList.h \
