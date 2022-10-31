@@ -86,10 +86,10 @@
 		<Unit filename="D:/AED/schedule/Classes/Class.h">
 			<Option target="schedule"/>
 		</Unit>
-		<Unit filename="D:/AED/schedule/Classes/DataBase.cpp">
+		<Unit filename="D:/AED/schedule/Classes/Read.cpp">
 			<Option target="schedule"/>
 		</Unit>
-		<Unit filename="D:/AED/schedule/Classes/DataBase.h">
+		<Unit filename="D:/AED/schedule/Classes/Read.h">
 			<Option target="schedule"/>
 		</Unit>
 		<Unit filename="D:/AED/schedule/Classes/Student.cpp">
