@@ -62,3 +62,5 @@ UcList DataBase::run() {
     }
     return uclist;
 }
+
+DataBase::DataBase() {}

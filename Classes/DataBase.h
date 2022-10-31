@@ -20,6 +20,7 @@ private:
     UcList uclist;
 public:
     UcList run();
+    DataBase();
 };
 
 
