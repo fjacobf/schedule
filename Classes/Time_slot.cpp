@@ -35,10 +35,3 @@ void Time_slot::setduration(float a) {
 void Time_slot::settype(string t) {
     type = t;
 }
-
-Time_slot::Time_slot(string type, float duration, float startHour, string weekday) {
-    setweekday(weekday);
-    settype(type);
-    setduration(duration);
-    setstarthour(startHour);
-}

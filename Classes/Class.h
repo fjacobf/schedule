@@ -9,7 +9,7 @@ using namespace std;
 ///Uma turma é identificada por um código e tem um horário associado.
 class Class {
 private:
-    int capacity;
+        int capacity;
         string ucCode;
         string classCode;
         list<Time_slot> time_slots;
@@ -32,10 +32,6 @@ public:
     void setUcCode(string code);
     /// set time_slots with @param list
     void setTimeSlots(list<Time_slot> list);
-    ///Insert a new time_slot with @param timeSlot
-    void insertTimeSlot(Time_slot timeSlot);
-    /// creates a new  class Classes
-    Class(int c, string ucCode, string ClassCode, Time_slot timeSlot);
 
 };
 
