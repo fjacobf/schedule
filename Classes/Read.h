@@ -17,7 +17,9 @@ using namespace std;
 
 class Read {
 public:
-    void run();
+    UcList run();
+    DataBase();
+
 };
 
 

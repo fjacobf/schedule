@@ -60,5 +60,6 @@ void Read::run() {
 
 
     }
-
 }
+
+DataBase::DataBase() {}
