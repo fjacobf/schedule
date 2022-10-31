@@ -3,7 +3,6 @@
 #include <string>
 #include "Time_slot.h"
 #include "list"
-#include "UcList.h"
 using namespace std;
 ///Classe para as Turmas.
 ///

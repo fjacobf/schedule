@@ -9,7 +9,7 @@ Uc::Uc(string uccode) {
 }
 
 void Uc::insertClass(Class classes) {
-    Classes.push_back(classes);
+    this->Classes.push_back(classes);
 }
 
 string Uc::getUcCode() {

@@ -33,18 +33,11 @@ void Read::run() {
         Uc ucs(content[i][1]);
         if(!uclist.exists(ucs))
             uclist.setUc(ucs);
-        for(int j=0;j<content[i].size();j++)
-        {
-            Time_slot time(content[i][5], stof(content[i][4]), stof(content[i][3]), content[i][2]);
-            Class classe(0, content[i][1], content[i][0], time);
-            ucs.insertClass(classe);
+        Time_slot time(content[i][5], stof(content[i][4]), stof(content[i][3]), content[i][2]);
+        Class classe(0, content[i][1], content[i][0], time);
 
 
-        }
-        cout<<"\n";
+
+
     }
-}
-
-Read::Read() {
-
 }

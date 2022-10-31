@@ -4,9 +4,7 @@
 CMakeFiles/schedule.dir/Classes/Class.cpp.obj: \
  ../Classes/Class.cpp \
  ../Classes/Class.h \
- ../Classes/Time_slot.h \
- ../Classes/Uc.h \
- ../Classes/UcList.h
+ ../Classes/Time_slot.h
 CMakeFiles/schedule.dir/Classes/Read.cpp.obj: \
  ../Classes/Class.h \
  ../Classes/Read.cpp \
@@ -18,9 +16,7 @@ CMakeFiles/schedule.dir/Classes/Student.cpp.obj: \
  ../Classes/Class.h \
  ../Classes/Student.cpp \
  ../Classes/Student.h \
- ../Classes/Time_slot.h \
- ../Classes/Uc.h \
- ../Classes/UcList.h
+ ../Classes/Time_slot.h
 CMakeFiles/schedule.dir/Classes/Time_slot.cpp.obj: \
  ../Classes/Time_slot.cpp \
  ../Classes/Time_slot.h
@@ -28,8 +24,7 @@ CMakeFiles/schedule.dir/Classes/Uc.cpp.obj: \
  ../Classes/Class.h \
  ../Classes/Time_slot.h \
  ../Classes/Uc.cpp \
- ../Classes/Uc.h \
- ../Classes/UcList.h
+ ../Classes/Uc.h
 CMakeFiles/schedule.dir/Classes/UcList.cpp.obj: \
  ../Classes/Class.h \
  ../Classes/Time_slot.h \

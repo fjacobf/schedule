@@ -10,14 +10,13 @@
 #include <vector>
 #include <sstream>
 #include "Class.h"
+#include "UcList.h"
+#include "Uc.h"
 
 using namespace std;
 
 class Read {
-    void read();
-
 public:
-    Read();
 
     void run();
 };
