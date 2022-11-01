@@ -19,8 +19,10 @@ class Database {
 private:
     UcList uclist;
 public:
-    UcList run();
+    UcList run_classes();
+    UcList getuclist();
     Database();
+    void verifyUc(UcList uclist);
 
 };
 
