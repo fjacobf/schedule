@@ -64,5 +64,4 @@
 }
 
 Database::Database() {
-    uclist = run();
 }

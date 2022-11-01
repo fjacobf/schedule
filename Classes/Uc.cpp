@@ -27,3 +27,5 @@ void Uc::eraselist() {
 list<Class> Uc::getList() {
     return Classes;
 }
+
+Uc::Uc() {}
