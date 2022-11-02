@@ -10,7 +10,7 @@ Database::Database() {
 
  UcList Database::run_classes() {
      UcList uclist;
-    string fclasses = "D:\\AED\\schedule\\arquivos\\classes.csv";
+    string fclasses = "classes.csv";
     vector<vector<string>> content;
     vector<string> row;
     string line, word;
@@ -71,7 +71,7 @@ UcList Database::getuclist() {
 }
 
 void Database::verifyUc(UcList uclist) {
-    string fclasses = "D:\\AED\\schedule\\arquivos\\classes_per_uc.csv";
+    string fclasses = "classes_per_uc.csv";
     vector<vector<string>> content;
     vector<string> row;
     string line, word;
@@ -93,7 +93,7 @@ void Database::verifyUc(UcList uclist) {
     else
         cout<<"Could not open the file\n";
     int i=0, count=0;
-    while(i < content.size()){
+    /*while(i < content.size()){
             for(Uc x : uclist.getlist()){
                 if(content[i][0] == x.getUcCode())
                     for(Class y : x.getList())
@@ -106,4 +106,5 @@ void Database::verifyUc(UcList uclist) {
             }
 
     }
+     */
 }
