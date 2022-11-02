@@ -4,7 +4,9 @@
 
 #include "Database.h"
 
-
+Database::Database() {
+    uclist = run_classes();
+}
 
  UcList Database::run_classes() {
      UcList uclist;
@@ -62,10 +64,6 @@
     }
     verifyUc(uclist);
     return uclist;
-}
-
-Database::Database() {
-    uclist = run_classes();
 }
 
 UcList Database::getuclist() {
