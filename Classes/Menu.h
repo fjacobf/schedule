@@ -15,7 +15,12 @@ private:
 public:
     Menu();
     int displayMenu();
-    void showStudents();
+    ///Tests if the @param choice is valid and is inside @param values
+    bool inputTest(char choice, vector<int> values);
+    ///The submenu for option [21]Student List
+    void studentListSubmenu();
+    ///Recieves an integer that controls how the students will be listed
+    void listStudents(int option);
 };
 
 
