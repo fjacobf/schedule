@@ -48,6 +48,9 @@ class BST {
 public:
     explicit BST(const T& notFound);
     BST(const BST& rhs);
+
+    BST();
+
     ~BST( );
     const T& findMin( ) const;
     const T& findMax( ) const;
@@ -246,6 +249,7 @@ BinaryNode<T>* BST<T>::clone( BinaryNode<T>* t ) const {
     else
         return new BinaryNode<T>(t->element, clone(t->left), clone(t->right));
 }
+
 
 
 //----------- iterators ---------

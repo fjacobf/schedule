@@ -11,7 +11,7 @@ private:
     list<Uc> Ucs;
 
 public:
-   void setUc(Uc uni);
+   void addUc(Uc uni);
    bool exists(Uc uni);
     list<Uc> getlist();
 };

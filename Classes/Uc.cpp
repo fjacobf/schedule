@@ -24,7 +24,7 @@ void Uc::eraselist() {
     Classes.clear();
 }
 
-list<Class> Uc::getList() {
+list<Class> Uc::getClassesList() {
     return Classes;
 }
 

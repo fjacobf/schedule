@@ -11,17 +11,31 @@ class Student {
 private:
     long int studentCode;
     string studentName;
-    list <Class> classes;
+    list<Class> classes;
 public:
+    Student();
 
-    long int getcode();
-    string getname();
+    Student(int studentCode, string name);
+
+    Student(int studentCode, string name, Class classe);
+
+    long int getcode() const;
+
+    string getname() const;
+
     list<Class> getclasses();
+
     void setcode(long int n);
+
     void setname(string n);
-    void setclasses(list<Class> list);
 
+    void insertClass(Class classe);
+
+    bool operator==(const Student &student) const;
+
+    bool operator<(const Student &student) const;
+
+    friend std::ostream& operator<<(ostream& os , const Student& stu);
 };
-
 
 #endif //SCHEDULE_STUDENT_H

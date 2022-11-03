@@ -17,11 +17,11 @@ public:
 
 
     ///@returns capacity
-    int getCapacity();
+    int getCapacity() const;
     ///@returns Classcode
-    string getClassCode();
+    string getClassCode() const;
     ///@returns UcCode
-    string getUcCode();
+    string getUcCode() const;
     ///@returns Time slots
     list<Time_slot> getTimeSlots();
     ///set capacity with @param c
@@ -36,7 +36,8 @@ public:
     void insertTimeSlot(Time_slot timeSlot);
     /// creates a new  class Classes
     Class(int c, string ucCode, string ClassCode, Time_slot timeSlot);
-
+    Class(int c, string ucCode, string ClassCode);
+    bool operator==(const Class &c) const;
 };
 
 

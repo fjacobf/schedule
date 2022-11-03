@@ -4,11 +4,23 @@
 
 #include "Student.h"
 
-long int Student::getcode() {
+Student::Student(int studentCode, string name) {
+    studentCode = studentCode;
+    name = name;
+}
+
+Student::Student(int studentCode, string name, Class classe) {
+    studentCode = studentCode;
+    name = name;
+    insertClass(classe);
+
+}
+
+long int Student::getcode() const {
     return studentCode;
 }
 
-string Student::getname() {
+string Student::getname() const{
     return studentName;
 }
 
@@ -24,6 +36,23 @@ void Student::setname(string n) {
     studentName = n;
 }
 
-void Student::setclasses(list<Class> list) {
-    classes=list;
+void Student::insertClass(Class classe) {
+    this->classes.push_back(classe);
+}
+
+
+//operators overload
+bool Student::operator==(const Student& student) const{
+    return studentCode == student.getcode();
+}
+
+std::ostream& operator<<(std::ostream& os , const Student& student)
+{
+    os << student.getname();
+    return os;
+}
+
+bool Student::operator<(const Student &student) const
+{
+    return studentName < student.getname();
 }

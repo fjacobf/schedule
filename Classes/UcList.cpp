@@ -4,7 +4,7 @@
 
 #include "UcList.h"
 
-void UcList::setUc(Uc uni) {
+void UcList::addUc(Uc uni) {
     Ucs.push_back(uni);
 }
 

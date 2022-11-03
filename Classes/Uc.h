@@ -17,7 +17,7 @@ public:
     string getUcCode();
     void SetUcCode(string code);
     void eraselist();
-    list<Class> getList();
+    list<Class> getClassesList();
 
     Uc();
 };

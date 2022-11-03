@@ -15,6 +15,7 @@ private:
 public:
     Menu();
     int displayMenu();
+    void showStudents();
 };
 
 

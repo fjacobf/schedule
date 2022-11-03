@@ -4,15 +4,15 @@
 
 #include "Class.h"
 
-string Class::getUcCode() {
+string Class::getUcCode() const {
     return ucCode;
 }
 
-int Class::getCapacity() {
+int Class::getCapacity() const{
     return capacity;
 }
 
-string Class::getClassCode() {
+string Class::getClassCode() const{
     return classCode;
 }
 
@@ -45,4 +45,14 @@ Class::Class(int c, string ucCode, string ClassCode, Time_slot timeSlot) {
     setUcCode(ucCode);
     setClassCode(ClassCode);
     insertTimeSlot(timeSlot);
+}
+Class::Class(int c, string ucCode, string ClassCode) {
+    setCapacity(c);
+    setUcCode(ucCode);
+    setClassCode(ClassCode);
+}
+
+bool Class::operator==(const Class &c) const
+{
+    return (capacity == c.getCapacity()) && (ucCode == c.getUcCode()) && (classCode == c.getClassCode());
 }
