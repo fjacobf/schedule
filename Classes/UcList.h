@@ -6,6 +6,10 @@
 #define SCHEDULE_UCLIST_H
 #include "Uc.h"
 
+///Classe para guardar a lista de UCs na classe Database.
+///
+///Uma cadeira é identificada por um código e tem um conjunto de turmas.
+
 class UcList {
 private:
     list<Uc> Ucs;

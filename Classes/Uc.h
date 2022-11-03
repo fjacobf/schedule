@@ -6,6 +6,10 @@
 #define SCHEDULE_UC_H
 #include "Class.h"
 
+///Classe para as Cadeiras.
+///
+///Uma cadeira é identificada por um código e tem um conjunto de turmas.
+
 class Uc {
 private:
     string Uccode;

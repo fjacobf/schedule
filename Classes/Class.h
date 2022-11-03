@@ -9,10 +9,10 @@ using namespace std;
 ///Uma turma é identificada por um código e tem um horário associado.
 class Class {
 private:
-        int capacity;
-        string ucCode;
-        string classCode;
-        list<Time_slot> time_slots;
+        int capacity; /*!< Capacidade da turma */
+        string ucCode; /*!< Código da cadeira desta turma */
+        string classCode; /*!< Código da turma */
+        list<Time_slot> time_slots; /*!< Lista de horários da turma */
 public:
 
 
@@ -32,11 +32,13 @@ public:
     void setUcCode(string code);
     /// set time_slots with @param list
     void setTimeSlots(list<Time_slot> list);
-    ///Insert a new time_slot with @param timeSlot
+    ///Insert a new time_slot with @param time_Slot
     void insertTimeSlot(Time_slot timeSlot);
-    /// creates a new  class Classes
+    /// creates a new class with a @param Time_slot
     Class(int c, string ucCode, string ClassCode, Time_slot timeSlot);
+    /// creates a new class without a Time Slot
     Class(int c, string ucCode, string ClassCode);
+    /// Operator of equals
     bool operator==(const Class &c) const;
 };
 
