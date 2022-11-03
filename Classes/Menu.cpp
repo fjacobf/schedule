@@ -84,7 +84,9 @@ void Menu:: showStudents(){
         aux.push_back(*i);
     }
     for(Student &j : aux){
-        cout << j.getcode() << "\n";
-        cout << j << "\n";
+        cout << j.getcode() << "-" << j << "\n";
+        for (Class &i : j.getclasses()){
+            cout << i.getUcCode()<< " / " << i.getClassCode() << "\n";
+        }
     }
 }

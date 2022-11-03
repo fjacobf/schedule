@@ -88,30 +88,33 @@ void Database:: readStudent_classesFile(){
     for(int i=1;i<content.size();i++)
     {
         Class classe(0,content[i][2], content[i][3]);
-        if(studentsBST.isEmpty()){
+        if(studentsBST.isEmpty()){ //testa se a arvore está vazia
             Student student (stoi(content[i][0]),content[i][1], classe);
             studentsBST.insert(student);
         }
         else{
             Student student (stoi(content[i][0]),content[i][1]);
-            if(student == studentsBST.find(student)){
-                if(student.getclasses().size()==0){
-                    student.insertClass(classe);
+            Student auxstu = studentsBST.find(student);
+            if(student == auxstu){ //testa se o estudante do arquivo existe na arvore
+                if(auxstu.getclasses().size()==0){ //testa se a lista de classes do estudante está vazia
+                    auxstu.insertClass(classe);
                 }
-                else{
+                else{ //testa se a classe do arquivo existe na lista de classes do estudante
                     //TODO alterar para busca binaria
-                    for(Class x : student.getclasses()){
+                    for(Class x : auxstu.getclasses()){
                         if(x==classe){
                             class_exist = true;
                             break;
                         }
                     }
-                    if(!class_exist){
-                        student.insertClass(classe);
+                    if(!class_exist){ //se a classe na existe na lista ela é inserida
+                        auxstu.insertClass(classe);
                     }
                 }
+                studentsBST.remove(student);
+                studentsBST.insert(auxstu);
             }
-            else{
+            else{ //se o estudante do arquivo na existe na arvore, a classe é inserida e ele é inserido na classe
                 student.insertClass(classe);
                 studentsBST.insert(student);
             }
