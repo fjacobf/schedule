@@ -54,5 +54,5 @@ Class::Class(int c, string ucCode, string ClassCode) {
 
 bool Class::operator==(const Class &c) const
 {
-    return (capacity == c.getCapacity() && ucCode == c.getUcCode() && classCode == c.getClassCode());
+    return (ucCode == c.getUcCode() && classCode == c.getClassCode());
 }

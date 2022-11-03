@@ -59,6 +59,7 @@ void Menu::showTimeTable(string a) {
         for(Class y : x.getClassesList()){
             if(y.getClassCode() == a) {
                 cout << "Uc: " << y.getUcCode() << "\n";
+                cout << "Capacity: " << y.getCapacity() << "\n";
                 for (Time_slot t: y.getTimeSlots()) {
                     cout << "weekday: " << t.getweekday() << "\n";
                     cout << "starthour: " << t.getstarthour() << "\n";

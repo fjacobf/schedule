@@ -26,7 +26,7 @@ public:
     UcList readClassesFile();
     UcList getuclist();
     Database();
-    void verifyUc(UcList uclist);
+    void verifyUc();
     void readStudent_classesFile();
 
     BST<Student> getStudentBST();

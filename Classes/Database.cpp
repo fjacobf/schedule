@@ -59,7 +59,7 @@ Database::Database() {
 
 
     }
-    verifyUc(uclist);
+    verifyUc();
     return uclist;
 }
 
@@ -135,7 +135,7 @@ BST<Student> Database::getStudentBST(){
     return studentsBST;
 }
 
-void Database::verifyUc(UcList uclist) {
+void Database::verifyUc() {
     string fclasses = "classes_per_uc.csv";
     vector<vector<string>> content;
     vector<string> row;
@@ -157,21 +157,13 @@ void Database::verifyUc(UcList uclist) {
     }
     else
         cout<<"Could not open the file\n";
-    int i=0, count=0;
-    /*while(i < content.size()){
-            for(Uc x : uclist.getlist()){
-                if(content[i][0] == x.getUcCode())
-                    for(Class y : x.getClassesList())
-                        if(content[i][1] == y.getClassCode()){
-                            count++;
-                            i++;
-                            break;
-                        }
-
-            }
-
+    ofstream Myfile("classes_per_uc.txt");
+    for(int i=1; i<content.size(); i++){
+        Myfile << content[i][0] << " " <<content[i][1]<< "\n";
     }
-     */
+    Myfile.close();
+
 }
+
 
 
