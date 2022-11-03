@@ -5,13 +5,13 @@
 #include "Student.h"
 
 Student::Student(int studentCode, string name) {
-    studentCode = studentCode;
-    name = name;
+    setcode(studentCode);
+    setname(name);
 }
 
 Student::Student(int studentCode, string name, Class classe) {
-    studentCode = studentCode;
-    name = name;
+    setcode(studentCode);
+    setname(name);
     insertClass(classe);
 
 }
@@ -54,5 +54,5 @@ std::ostream& operator<<(std::ostream& os , const Student& student)
 
 bool Student::operator<(const Student &student) const
 {
-    return studentName < student.getname();
+    return studentCode < student.getcode();
 }

@@ -112,6 +112,7 @@ void Database:: readStudent_classesFile(){
                 }
             }
             else{
+                student.insertClass(classe);
                 studentsBST.insert(student);
             }
 
