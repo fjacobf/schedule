@@ -18,8 +18,8 @@
 using namespace std;
 
 class Database {
-    BST<Student> studentsBST = BST<Student>(Student(0,"a"));;
 private:
+    BST<Student> studentsBST = BST<Student>(Student(0,"a"));
     UcList uclist;
 
 public:
