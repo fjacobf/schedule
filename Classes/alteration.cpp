@@ -20,9 +20,9 @@ void alteration::setclasses(Class aclass) {
     classes = aclass;
 }
 
-alteration::alteration(Student student, Class aclass, string type, Class classes) : classes(classes) {
+alteration::alteration(Student student, string type, Class classes){
     this->student=student;
-    this->classes = aclass;
+    this->classes = classes;
     this->type=type;
 }
 

@@ -56,3 +56,7 @@ bool Class::operator==(const Class &c) const
 {
     return (ucCode == c.getUcCode() && classCode == c.getClassCode());
 }
+
+Class::Class() {
+
+}

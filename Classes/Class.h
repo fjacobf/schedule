@@ -38,6 +38,9 @@ public:
     Class(int c, string ucCode, string ClassCode, Time_slot timeSlot);
     /// creates a new class without a Time Slot
     Class(int c, string ucCode, string ClassCode);
+
+    Class();
+
     /// Operator of equals
     bool operator==(const Class &c) const;
 };

@@ -7,6 +7,7 @@
 
 
 #include "Student.h"
+#include "Class.h"
 ///Classe para as alterações de horário.
 ///
 ///Um estudante pode pedir alterações no seu horário.
@@ -21,7 +22,7 @@ public:
     Class getclasses();
     string gettype();
     void setclasses(Class aclass);
-    alteration(Student student, Class aclass, string type, Class classes);
+    alteration(Student student,string type, Class classes);
 };
 
 
