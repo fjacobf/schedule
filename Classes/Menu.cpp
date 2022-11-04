@@ -204,6 +204,7 @@ bool Menu:: inputTest(char choice ,vector<int> values) {
 }
 
 void Menu::alteration_run() {
+    ofstream Myfile("Pedidos_nao_concedidos");
     while (!alt.empty()) {
         BST<Student> tree = database.getStudentBST();
         Student aux = tree.find(alt.front().getstudent());
@@ -212,11 +213,12 @@ void Menu::alteration_run() {
             if("rem" == choice){ /*remove from class */
                 bool found = false;
                 for (Class y: aux.getclasses()) {
-                        if (alt.front().getclasses() == y) {
-                            aux.popClass(y);
-                            found = true;
-                            break;
-                        }
+                    if (alt.front().getclasses() == y) {
+                        aux.popClass(y);
+                        found = true;
+                        break;
+                    }
+                }
 
                     if (found) {
                         tree.remove(aux);
@@ -225,8 +227,7 @@ void Menu::alteration_run() {
                         alt.pop();
                         break;
                     }
-                }
-                break;
+
             }
             if("add"==choice) { /*add in a class/uc */
                 list<Time_slot> time = gettimetable(alt.front().getstudent().getcode());
@@ -265,16 +266,14 @@ void Menu::alteration_run() {
                     tree.remove(aux);
                     tree.insert(aux);
                     alt.pop();
-                } else {
-                    ofstream Myfile("Pedidos_nao_concedidos");
+                }
+
+                else {
                     Myfile << "Estudante numero: " << alt.front().getstudent().getcode()
                            << " Tipo de alteração negado: " << alt.front().gettype() << "\n";
                     alt.pop();
-
                 }
 
-
-                break;
             }
             if("alt"==choice){ /*alterate in a class/uc */
                 for (Class y: aux.getclasses()) {
@@ -319,7 +318,6 @@ void Menu::alteration_run() {
                     tree.insert(aux);
                     alt.pop();
                 } else {
-                    ofstream Myfile("Pedidos_nao_concedidos");
                     Myfile << "Estudante numero: " << alt.front().getstudent().getcode()
                            << " Tipo de alteração negado: " << alt.front().gettype() << "\n";
                     alt.pop();
@@ -327,8 +325,10 @@ void Menu::alteration_run() {
                 }
             }
 
-            }}
-
+            }
+        database.set_studentBST(tree);
+        Myfile.close();
+    }
 }
 
 list<Time_slot> Menu::gettimetable(int code) {
