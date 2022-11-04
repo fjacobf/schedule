@@ -2,6 +2,7 @@
 #define SCHEDULE_STUDENT_H
 #include <string>
 #include "Class.h"
+
 using namespace std;
 ///Classe para os Estudantes.
 ///
@@ -10,6 +11,7 @@ using namespace std;
 class Student {
 private:
     long int studentCode;
+    int year;
     string studentName;
     list<Class> classes;
 public:
@@ -23,11 +25,15 @@ public:
 
     string getname() const;
 
+    int getyear() const;
+
     list<Class> getclasses();
 
     void setcode(long int n);
 
     void setname(string n);
+
+    void setyear(int n);
 
     void insertClass(Class classe);
 
@@ -35,7 +41,7 @@ public:
 
     bool operator<(const Student &student) const;
 
-    friend std::ostream& operator<<(ostream& os , const Student& stu);
+    friend std::ostream& operator<<(std::ostream& os , const Student& student);
 };
 
 #endif //SCHEDULE_STUDENT_H

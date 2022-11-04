@@ -21,6 +21,8 @@ public:
     void studentListSubmenu();
     ///Recieves an integer that controls how the students will be listed
     void listStudents(int option);
+
+    list<struct Student> ordenationSubmenu(list<Student> studentsList);
 };
 
 

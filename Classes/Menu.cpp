@@ -3,11 +3,12 @@
 #include <stdlib.h>
 #include <algorithm>
 #include <unistd.h>
-
+#include "SortForm.cpp"
 Menu::Menu() {}
 int Menu::displayMenu() {
     while(true) {
-        cout << "=====================================================================\n"
+        cout << "\n\n"
+                "=====================================================================\n"
                 " .d8888b.           888                    888          888          \n"
                 "d88P  Y88b          888                    888          888          \n"
                 "Y88b.               888                    888          888          \n"
@@ -19,8 +20,8 @@ int Menu::displayMenu() {
                 "\"Y8888P\"   \"Y8888P 888  888  \"Y8888   \"Y88888  \"Y88888 888  \"Y8888  \n"
                 "=====================================================================\n"
                 "|==========================|              |============================|  \n"
-                "|     **Ocupation**        |              |      **Student**           |  \n"
-                "|     [11]Per Class X      |              | [21]Students List X        |  \n"
+                "|      **Ocupation**       |              |      **Student**           |  \n"
+                "|     [11]Per Class X      |              | [21]Students List          |  \n"
                 "|     [12]Per Year  X      |              | [22]Timetable per Student X|  \n"
                 "|     [13]Per UC   X       |              | [23]Alterations X          |  \n"
                 "|==========================|              |============================|  \n"
@@ -53,7 +54,9 @@ int Menu::displayMenu() {
 }
 
 void Menu:: studentListSubmenu() {
-        cout << "|======Choose an option:======|\n"
+        cout << "\n\n"
+                "|=============================|\n"
+                "|         How to list?        |\n"
                 "|     [1]List every student   |\n"
                 "|     [2]List per class       |\n"
                 "|     [3]List per UC          |\n"
@@ -67,28 +70,66 @@ void Menu:: studentListSubmenu() {
         cin >> choice;
         vector<int> values = {0, 1, 2, 3, 4};
         if (!inputTest(choice, values)) continue;
-        BST<Student> tree = database.getStudentBST(); //BST student copy --------------------------------------------
+        BST<Student> tree = database.getStudentBST();
+        list<Student> aux;
         switch (choice) {
             case 0:
                 return; //exit
             case 1:
-                //TODO ordering submenu
-                return;
+                for (auto i = tree.begin(); i != tree.end(); i++){ aux.push_back(*i); }
+                aux = ordenationSubmenu(aux);
+                break;
                //listagem por geral
             case 2:
                 listStudents(2);
-                return;
+                break;
                 //listagem por turma
             case 3:
                 listStudents(3);
-                return;
+                break;
                 //listagem por UC
             case 4:
                 listStudents(4);
-                return;
+                break;
                 //listagem por ano
         }
+        for(Student &j : aux){ cout << j << "\n";}
+        system("pause");
+        return;
+    }
+}
 
+list<Student> Menu:: ordenationSubmenu(list<Student> studentsList){
+    cout << "\n\n"
+            "|===================================|\n"
+            "|          How to order?            |\n"
+            "|   [1]Per name cres. order         |\n"
+            "|   [2]Per name decs order          |\n"
+            "|   [3]Per student Code cres order  |\n"
+            "|   [4]Per student Code decs order  |\n"
+            "|===================================|\n";
+    cout << endl;
+    while (true){
+        cout << "Choose an option:";
+        int choice;
+        cin >> choice;
+        vector<int> values = {1, 2, 3, 4};
+        if (!inputTest(choice, values)) continue;
+        switch (choice) {
+            case 1:
+                studentsList.sort(sortStudentByNameAsc);
+                break;
+            case 2:
+                studentsList.sort(sortStudentByNameDsc);
+                break;
+            case 3:
+                studentsList.sort(sortStudentByCodeAsc);
+                break;
+            case 4:
+                studentsList.sort(sortStudentByCodeDsc);
+                break;
+        }
+        return studentsList;
     }
 }
 
@@ -117,10 +158,8 @@ void Menu::showTimeTable(string a) {
 void Menu:: listStudents(int option){
     list<Student> aux;
     BST<Student> tree = database.getStudentBST();
-    if(tree.isEmpty()){
-        cout << "empty tree" ;
-        return;
-    }
+    if(tree.isEmpty()){cout << "empty tree" ; return;}
+
     switch (option) {
         case 1:
             for (auto i = tree.begin(); i != tree.end(); i++)

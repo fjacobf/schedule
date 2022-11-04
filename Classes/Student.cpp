@@ -3,7 +3,7 @@
 //
 
 #include "Student.h"
-
+#include <sstream>
 Student::Student(int studentCode, string name) {
     setcode(studentCode);
     setname(name);
@@ -17,11 +17,15 @@ Student::Student(int studentCode, string name, Class classe) {
 }
 
 long int Student::getcode() const {
-    return studentCode;
+    return this->studentCode;
 }
 
 string Student::getname() const{
-    return studentName;
+    return this->studentName;
+}
+
+int Student::getyear() const {
+    return this->year;
 }
 
 list<Class> Student::getclasses() {
@@ -36,6 +40,10 @@ void Student::setname(string n) {
     studentName = n;
 }
 
+void Student::setyear(int n) {
+    year = studentCode/100000;
+}
+
 void Student::insertClass(Class classe) {
     this->classes.push_back(classe);
 }
@@ -48,7 +56,7 @@ bool Student::operator==(const Student& student) const{
 
 std::ostream& operator<<(std::ostream& os , const Student& student)
 {
-    os << student.getname();
+    os << student.getname() << " - " << student.getcode();
     return os;
 }
 
