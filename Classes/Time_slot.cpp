@@ -4,19 +4,19 @@
 
 #include "Time_slot.h"
 
-string Time_slot::getweekday() {
+string Time_slot::getweekday() const{
     return  weekday;
 }
 
-float Time_slot::getstarthour() {
+float Time_slot::getstarthour() const{
     return startHour;
 }
 
-float Time_slot::getduration() {
+float Time_slot::getduration() const{
     return duration;
 }
 
-string Time_slot::gettype() {
+string Time_slot::gettype() const{
     return type;
 }
 

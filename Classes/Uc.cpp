@@ -12,7 +12,7 @@ void Uc::insertClass(Class classes) {
     this->Classes.push_back(classes);
 }
 
-string Uc::getUcCode() {
+string Uc::getUcCode() const{
     return Uccode;
 }
 

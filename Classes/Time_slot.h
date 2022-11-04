@@ -14,10 +14,10 @@ private:
 
 public:
 
-    string getweekday();
-    float getstarthour();
-    float getduration();
-    string gettype();
+    string getweekday() const;
+    float getstarthour() const;
+    float getduration() const;
+    string gettype() const;
     void setweekday(string n);
     void setstarthour(float a);
     void setduration(float a);

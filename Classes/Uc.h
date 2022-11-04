@@ -18,7 +18,7 @@ private:
 public:
     Uc(string uccode);
     void insertClass(Class classes);
-    string getUcCode();
+    string getUcCode()const;
     void SetUcCode(string code);
     void eraselist();
     list<Class> getClassesList();
