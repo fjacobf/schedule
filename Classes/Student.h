@@ -33,7 +33,7 @@ public:
 
     void setname(string n);
 
-    void setyear(int n);
+    void setyear();
 
     void insertClass(Class classe);
 

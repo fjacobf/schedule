@@ -5,11 +5,12 @@
 #include <unistd.h>
 #include "SortForm.cpp"
 #include "alteration.h"
-
+using namespace std;
 Menu::Menu() {}
 int Menu::displayMenu() {
     while(true) {
-        cout << "\n\n"
+        cout << string(100,'\n');
+        cout <<
                 "=====================================================================\n"
                 " .d8888b.           888                    888          888          \n"
                 "d88P  Y88b          888                    888          888          \n"
@@ -23,31 +24,43 @@ int Menu::displayMenu() {
                 "=====================================================================\n"
                 "|==========================|              |============================|  \n"
                 "|      **Ocupation**       |              |      **Student**           |  \n"
-                "|     [11]Per Class X      |              | [21]Students List          |  \n"
-                "|     [12]Per Year  X      |              | [22]Timetable per Student X|  \n"
-                "|     [13]Per UC   X       |              | [23]Alterations X          |  \n"
+                "|     [11]Per Class        |              | [21]Students List          |  \n"
+                "|     [12]Per Year         |              | [22]Timetable per Student X|  \n"
+                "|     [13]Per UC           |              | [23]Alterations X          |  \n"
                 "|==========================|              |============================|  \n"
                 "|        **UCs**           |              |                            |  \n"
                 "|     [31]Ucs Listing  X   |              | [0]Exit                    |  \n"
-                "|     [32]Classes per UC X |              | [1]Save X                  |  \n"
+                "|     [32]Classes per UC X |              |                            |  \n"
                 "|                          |              |                            |  \n"
                 "|==========================|              |============================|  \n"
                 ;
         cout << endl;
         cout << "Choose an option:";
         int choice;
+        string key;
         cin >> choice;
-        vector<int> values = {0,1,11,12,13,21,22,23,31,32,33};
+        vector<int> values = {0,11,12,13,21,22,23,31,32,33};
         if(!inputTest(choice,values)) continue;
         switch (choice) {
             case 0: {
                 alteration_run();
                 exit(0);
             }
-            case 1: //save
-            case 11: break; //ocupation per class
-            case 12: break; //ocupation per year
-            case 13: break; //ocupation per uc
+            case 11: //ocupation per class
+                cout << "Type the class:";
+                cin >> key;
+                ocupationSubmenu(2 , key);
+                break;
+            case 12://ocupation per year
+                cout << "Type the year:";
+                cin >> key;
+                ocupationSubmenu(4 , key);
+                break;
+            case 13://ocupation per uc
+                cout << "Type the uc:";
+                cin >> key;
+                ocupationSubmenu(3 , key);
+                break;
             case 21: studentListSubmenu(); break; //TODO Student listing submenu
             case 22: break; //Timetable per student
             case 23:  break; //Alterations submenu
@@ -74,29 +87,28 @@ void Menu:: studentListSubmenu() {
         cin >> choice;
         vector<int> values = {0, 1, 2, 3, 4};
         if (!inputTest(choice, values)) continue;
-        BST<Student> tree = database.getStudentBST();
-        list<Student> aux;
+        string key;
         switch (choice) {
             case 0:
                 return; //exit
-            case 1:
-                for (auto i = tree.begin(); i != tree.end(); i++){ aux.push_back(*i); }
-                aux = studentOrdenationSubmenu(aux);
+            case 1: //listagem por geral
+                key = "geral";
                 break;
-               //listagem por geral
-            case 2:
-                listStudents(2);
+            case 2://listagem por turma
+                cout << "Type the class:";
+                cin >> key;
                 break;
-                //listagem por turma
-            case 3:
-                listStudents(3);
+            case 3://listagem por UC
+                cout << "Type the UC:";
+                cin >> key;
                 break;
-                //listagem por UC
-            case 4:
-                listStudents(4);
+            case 4://listagem por ano
+                cout << "Type the year:";
+                cin >> key;
                 break;
-                //listagem por ano
         }
+        list<Student> aux = listStudents(choice, key);
+        aux = studentOrdenationSubmenu(aux);
         for(Student &j : aux){ cout << j << "\n";}
         system("pause");
         return;
@@ -137,6 +149,29 @@ list<Student> Menu:: studentOrdenationSubmenu(list<Student> studentsList){
     }
 }
 
+void Menu:: ocupationSubmenu(int choice, string key){
+    list<Student> aux = listStudents(choice, key);
+    cout << "\n"
+            "|===================================|\n"
+            "|          Ocupation of:            |\n"
+            "|             " << key << "              |\n"
+                                       "|             is:" << aux.size()<< "               |\n"
+            "|===================================|\n";
+    cout << endl;
+    cout << "Do you want to list the students?\n"
+            "[1] Yes\n"
+            "[0] No\n";
+    int c;
+    cin >> c;
+    vector<int> values = {0,1};
+    if(!inputTest(c,values)) return;
+    if(c==0) return;
+    else {
+        aux = studentOrdenationSubmenu(aux);
+        for(Student &j : aux){ cout << j << "\n";}
+        system("pause");
+    }
+}
 
 void Menu::showTimeTable(string a) {
     system("cls");
@@ -159,31 +194,38 @@ void Menu::showTimeTable(string a) {
     cout << "\n\n\n";
 }
 
-void Menu:: listStudents(int option){
+list<Student> Menu:: listStudents(int choice, string key){
     list<Student> aux;
     BST<Student> tree = database.getStudentBST();
-    if(tree.isEmpty()){cout << "empty tree" ; return;}
-
-    switch (option) {
-        case 1:
-            for (auto i = tree.begin(); i != tree.end(); i++)
-            {
+    if(tree.isEmpty()){cout << "empty tree" ;}
+    for (auto i = tree.begin(); i != tree.end(); i++) {
+        Student student = *i;
+        switch (choice) {
+            case 1: //listagem geral
                 aux.push_back(*i);
-            }
-            for(Student &j : aux){
-                cout << j.getcode() << "-" << j << "\n";
-                for (Class &i : j.getclasses()){
-                    cout << i.getUcCode()<< " / " << i.getClassCode() << "\n";
+                break;
+            case 2: //listagem por turma
+                for (auto f : student.getclasses()){
+                    if(f.getClassCode() == key){
+                        aux.push_back(student);
+                    }
                 }
-            }
-            break;
-        case 2:
-            break;
-        case 3:
-            break;
-        case 4:
-            break;
+                break;
+            case 3: //listagem por UC
+                for (auto f : student.getclasses()){
+                    if(f.getUcCode() == key){
+                        aux.push_back(student);
+                    }
+                }
+                break;
+            case 4: //listagem por ano
+                if(student.getyear() == stoi(key)){
+                    aux.push_back(student);
+                }
+                break;
+        }
     }
+    return aux;
 }
 
 bool Menu:: inputTest(char choice ,vector<int> values) {

@@ -25,13 +25,15 @@ public:
     ///The submenu for option [21]Student List
     void studentListSubmenu();
     ///Recieves an integer that controls how the students will be listed
-    void listStudents(int option);
+    list<struct Student> listStudents(int option, string key);
 
     void alteration_run();
 
     list<Time_slot> gettimetable(int code);
 
     list<struct Student> studentOrdenationSubmenu(list<Student> studentsList);
+
+    void ocupationSubmenu(int choice, string key);
 };
 
 

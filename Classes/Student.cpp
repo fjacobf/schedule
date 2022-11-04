@@ -7,12 +7,14 @@
 Student::Student(int studentCode, string name) {
     setcode(studentCode);
     setname(name);
+    setyear();
 }
 
 Student::Student(int studentCode, string name, Class classe) {
     setcode(studentCode);
     setname(name);
     insertClass(classe);
+    setyear();
 
 }
 
@@ -40,7 +42,7 @@ void Student::setname(string n) {
     studentName = n;
 }
 
-void Student::setyear(int n) {
+void Student::setyear() {
     year = studentCode/100000;
 }
 
