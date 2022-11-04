@@ -77,7 +77,7 @@ void Menu:: studentListSubmenu() {
                 return; //exit
             case 1:
                 for (auto i = tree.begin(); i != tree.end(); i++){ aux.push_back(*i); }
-                aux = ordenationSubmenu(aux);
+                aux = studentOrdenationSubmenu(aux);
                 break;
                //listagem por geral
             case 2:
@@ -99,7 +99,7 @@ void Menu:: studentListSubmenu() {
     }
 }
 
-list<Student> Menu:: ordenationSubmenu(list<Student> studentsList){
+list<Student> Menu:: studentOrdenationSubmenu(list<Student> studentsList){
     cout << "\n\n"
             "|===================================|\n"
             "|          How to order?            |\n"

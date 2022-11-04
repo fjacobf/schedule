@@ -22,7 +22,7 @@ public:
     ///Recieves an integer that controls how the students will be listed
     void listStudents(int option);
 
-    list<struct Student> ordenationSubmenu(list<Student> studentsList);
+    list<struct Student> studentOrdenationSubmenu(list<Student> studentsList);
 };
 
 
