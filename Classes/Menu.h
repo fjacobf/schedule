@@ -7,11 +7,13 @@
 
 
 #include "Database.h"
+#include "alteration.h"
 
 class Menu {
 private:
     Database database;
     void showTimeTable(string a);
+    queue<alteration> alt;
 public:
     Menu();
     int displayMenu();
@@ -21,6 +23,10 @@ public:
     void studentListSubmenu();
     ///Recieves an integer that controls how the students will be listed
     void listStudents(int option);
+
+    void alteration_run();
+
+    list<Time_slot> gettimetable(int code);
 
     list<struct Student> studentOrdenationSubmenu(list<Student> studentsList);
 };

@@ -28,7 +28,7 @@ public:
     Database();
     void verifyUc();
     void readStudent_classesFile();
-
+    void set_studentBST(BST<Student> tree);
     BST<Student> getStudentBST();
 };
 

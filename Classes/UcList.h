@@ -18,6 +18,8 @@ public:
    void addUc(Uc uni);
    bool exists(Uc uni);
     list<Uc> getlist();
+    bool equilibrium(string uc);
+    list<Time_slot> getTimeSlot(string uc, string classe);
 };
 
 

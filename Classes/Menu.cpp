@@ -4,6 +4,8 @@
 #include <algorithm>
 #include <unistd.h>
 #include "SortForm.cpp"
+#include "alteration.h"
+
 Menu::Menu() {}
 int Menu::displayMenu() {
     while(true) {
@@ -38,15 +40,17 @@ int Menu::displayMenu() {
         vector<int> values = {0,1,11,12,13,21,22,23,31,32,33};
         if(!inputTest(choice,values)) continue;
         switch (choice) {
-            case 0:
+            case 0: {
+                alteration_run();
                 exit(0);
+            }
             case 1: //save
             case 11: break; //ocupation per class
             case 12: break; //ocupation per year
             case 13: break; //ocupation per uc
             case 21: studentListSubmenu(); break; //TODO Student listing submenu
             case 22: break; //Timetable per student
-            case 23: break; //Alterations submenu
+            case 23:  break; //Alterations submenu
             case 31: break; //Ucs listing
             case 32: break; //Classes per UC
         }
@@ -197,4 +201,139 @@ bool Menu:: inputTest(char choice ,vector<int> values) {
         return false;
 }
     return true;
+}
+
+void Menu::alteration_run() {
+    while (!alt.empty()) {
+        BST<Student> tree = database.getStudentBST();
+        Student aux = tree.find(alt.front().getstudent());
+        string choice = alt.front().gettype();
+
+            if("rem" == choice){ /*remove from class */
+                bool found = false;
+                for (Class y: aux.getclasses()) {
+                        if (alt.front().getclasses() == y) {
+                            aux.popClass(y);
+                            found = true;
+                            break;
+                        }
+
+                    if (found) {
+                        tree.remove(aux);
+                        tree.insert(aux);
+                        database.set_studentBST(tree);
+                        alt.pop();
+                        break;
+                    }
+                }
+                break;
+            }
+            if("add"==choice) { /*add in a class/uc */
+                list<Time_slot> time = gettimetable(alt.front().getstudent().getcode());
+                list<Time_slot> pretended;
+                bool found = false;
+                bool can_do = true;
+                for (Uc u: database.getuclist().getlist()) {
+                    for (Class c: u.getClassesList()) {
+                        if (c == alt.front().getclasses()) {
+                            alt.front().getclasses().setTimeSlots(c.getTimeSlots());
+                            pretended = c.getTimeSlots();
+                            if (c.getCapacity() + 1 > 20)
+                                can_do = false;
+                        }
+                    }
+                }
+                for (Time_slot t: time) {
+                    for (Time_slot p: pretended) {
+                        if (p.getweekday() == t.getweekday()) {
+                            if ((t.getstarthour() <= p.getstarthour() &&
+                                 t.getstarthour() + t.getduration() > p.getstarthour()) ||
+                                p.getstarthour() <= t.getstarthour() &&
+                                p.getstarthour() + p.getduration() > t.getstarthour()) {
+                                can_do = false;
+                            }
+                        }
+                    }
+                    if (!can_do)
+                        break;
+                }
+                if(can_do)
+                    can_do = database.getuclist().equilibrium(alt.front().getclasses().getUcCode());
+
+                if (can_do) {
+                    aux.insertClass(alt.front().getclasses());
+                    tree.remove(aux);
+                    tree.insert(aux);
+                    alt.pop();
+                } else {
+                    ofstream Myfile("Pedidos_nao_concedidos");
+                    Myfile << "Estudante numero: " << alt.front().getstudent().getcode()
+                           << " Tipo de alteração negado: " << alt.front().gettype() << "\n";
+                    alt.pop();
+
+                }
+
+
+                break;
+            }
+            if("alt"==choice){ /*alterate in a class/uc */
+                for (Class y: aux.getclasses()) {
+                        if (alt.front().getclasses() == y) {
+                            aux.popClass(y);
+                            break;
+                        }
+                list<Time_slot> time = gettimetable(alt.front().getstudent().getcode());
+                list<Time_slot> pretended;
+                bool found = false;
+                bool can_do = true;
+                for (Uc u: database.getuclist().getlist()) {
+                    for (Class c: u.getClassesList()) {
+                        if (c == alt.front().getclasses()) {
+                            alt.front().getclasses().setTimeSlots(c.getTimeSlots());
+                            pretended = c.getTimeSlots();
+                            if (c.getCapacity() + 1 > 20)
+                                can_do = false;
+                        }
+                    }
+                }
+                for (Time_slot t: time) {
+                    for (Time_slot p: pretended) {
+                        if (p.getweekday() == t.getweekday()) {
+                            if ((t.getstarthour() <= p.getstarthour() &&
+                                 t.getstarthour() + t.getduration() > p.getstarthour()) ||
+                                p.getstarthour() <= t.getstarthour() &&
+                                p.getstarthour() + p.getduration() > t.getstarthour()) {
+                                can_do = false;
+                            }
+                        }
+                    }
+                    if (!can_do)
+                        break;
+                }
+                if(can_do)
+                    can_do = database.getuclist().equilibrium(alt.front().getclasses().getUcCode());
+
+                if (can_do) {
+                    aux.insertClass(alt.front().getclasses());
+                    tree.remove(aux);
+                    tree.insert(aux);
+                    alt.pop();
+                } else {
+                    ofstream Myfile("Pedidos_nao_concedidos");
+                    Myfile << "Estudante numero: " << alt.front().getstudent().getcode()
+                           << " Tipo de alteração negado: " << alt.front().gettype() << "\n";
+                    alt.pop();
+
+                }
+            }
+
+            }}
+
+}
+
+list<Time_slot> Menu::gettimetable(int code) {
+    BST<Student> tree = database.getStudentBST();
+    Student student = tree.find(Student(code, ""));
+    list<Time_slot> time = student.gettimetable();
+    return time;
 }

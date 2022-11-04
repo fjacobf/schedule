@@ -37,11 +37,15 @@ public:
 
     void insertClass(Class classe);
 
+    void popClass(Class classe);
+
     bool operator==(const Student &student) const;
 
     bool operator<(const Student &student) const;
 
     friend std::ostream& operator<<(std::ostream& os , const Student& student);
+
+    list<Time_slot> gettimetable();
 };
 
 #endif //SCHEDULE_STUDENT_H

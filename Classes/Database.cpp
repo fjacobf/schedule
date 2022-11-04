@@ -88,6 +88,19 @@ void Database:: readStudent_classesFile(){
     for(int i=1;i<content.size();i++)
     {
         Class classe(0,content[i][2], content[i][3]);
+        bool found = false;
+        for(Uc uc : uclist.getlist()){
+            for(Class c : uc.getClassesList()){
+                if(classe == c) {
+                    classe.setTimeSlots(c.getTimeSlots());
+                    c.setCapacity(c.getCapacity()+1);
+                    found = true;
+                    break;
+                }
+            }
+            if(found)
+                break;
+        }
         if(studentsBST.isEmpty()){ //testa se a arvore está vazia
             Student student (stoi(content[i][0]),content[i][1], classe);
             studentsBST.insert(student);
@@ -163,6 +176,10 @@ void Database::verifyUc() {
     }
     Myfile.close();
 
+}
+
+void Database::set_studentBST(BST<Student> tree) {
+    studentsBST = tree;
 }
 
 

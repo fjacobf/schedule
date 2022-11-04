@@ -3,4 +3,4 @@ project(schedule)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(schedule main.cpp Classes/Time_slot.cpp Classes/Time_slot.h Classes/Student.cpp Classes/Student.h Classes/Class.cpp Classes/Class.h Classes/Database.cpp Classes/Database.h Classes/Uc.cpp Classes/Uc.h Classes/UcList.cpp Classes/UcList.h Classes/Menu.cpp Classes/Menu.h)
+add_executable(schedule main.cpp Classes/Time_slot.cpp Classes/Time_slot.h Classes/Student.cpp Classes/Student.h Classes/Class.cpp Classes/Class.h Classes/Database.cpp Classes/Database.h Classes/Uc.cpp Classes/Uc.h Classes/UcList.cpp Classes/UcList.h Classes/Menu.cpp Classes/Menu.h Classes/alteration.cpp Classes/alteration.h)

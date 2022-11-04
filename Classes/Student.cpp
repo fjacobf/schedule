@@ -64,3 +64,19 @@ bool Student::operator<(const Student &student) const
 {
     return studentCode < student.getcode();
 }
+
+void Student::popClass(Class classe) {
+    classes.remove(classe);
+}
+
+Student::Student() {
+
+}
+
+list<Time_slot> Student::gettimetable() {
+    list<Time_slot> time;
+    for (Class c : classes)
+        for(Time_slot t : c.getTimeSlots())
+            time.push_back(t);
+    return time;
+}
