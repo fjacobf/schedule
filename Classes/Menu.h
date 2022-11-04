@@ -8,6 +8,9 @@
 
 #include "Database.h"
 #include "alteration.h"
+///Classe para o menu.
+///
+///O menu é essencial para o projeto.
 
 class Menu {
 private:

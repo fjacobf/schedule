@@ -30,7 +30,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">AED Project<span id="projectnumber">&#160;early-alpha</span>
+   <div id="projectname">AED Project<span id="projectnumber">&#160;final</span>
    </div>
    <div id="projectbrief">Time for the students</div>
   </td>
@@ -103,6 +103,9 @@ $(document).ready(function(){initNavTree('class_database.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 
+<p>Classe para a database.  
+ <a href="class_database.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_database_8h_source.html">Database.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -113,14 +116,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab23705a1759b594578d4a1895f71ff02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4703c80e6969d33565ea340f768fdadf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_database.html#a4703c80e6969d33565ea340f768fdadf">Database</a> ()</td></tr>
 <tr class="separator:a4703c80e6969d33565ea340f768fdadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fda86979e8b2aa35e585c88c1974164"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_database.html#a9fda86979e8b2aa35e585c88c1974164">verifyUc</a> (<a class="el" href="class_uc_list.html">UcList</a> uclist)</td></tr>
-<tr class="separator:a9fda86979e8b2aa35e585c88c1974164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b97c11fc585d8b0180e1266c0b3183"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_database.html#a43b97c11fc585d8b0180e1266c0b3183">verifyUc</a> ()</td></tr>
+<tr class="separator:a43b97c11fc585d8b0180e1266c0b3183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64927a643944bea370149e976a58c36a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_database.html#a64927a643944bea370149e976a58c36a">readStudent_classesFile</a> ()</td></tr>
 <tr class="separator:a64927a643944bea370149e976a58c36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9be694385251bc28ea63abbcef7a546"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_database.html#ac9be694385251bc28ea63abbcef7a546">set_studentBST</a> (<a class="el" href="class_b_s_t.html">BST</a>&lt; <a class="el" href="class_student.html">Student</a> &gt; tree)</td></tr>
+<tr class="separator:ac9be694385251bc28ea63abbcef7a546"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18f958c2ecd596dfffd1bb75fe8fc064"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_b_s_t.html">BST</a>&lt; <a class="el" href="class_student.html">Student</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_database.html#a18f958c2ecd596dfffd1bb75fe8fc064">getStudentBST</a> ()</td></tr>
 <tr class="separator:a18f958c2ecd596dfffd1bb75fe8fc064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Classe para a database. </p>
+<p >Onde todos os dados são guardados. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4703c80e6969d33565ea340f768fdadf" name="a4703c80e6969d33565ea340f768fdadf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4703c80e6969d33565ea340f768fdadf">&#9670;&#160;</a></span>Database()</h2>
 
@@ -207,8 +215,26 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9fda86979e8b2aa35e585c88c1974164" name="a9fda86979e8b2aa35e585c88c1974164"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fda86979e8b2aa35e585c88c1974164">&#9670;&#160;</a></span>verifyUc()</h2>
+<a id="ac9be694385251bc28ea63abbcef7a546" name="ac9be694385251bc28ea63abbcef7a546"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9be694385251bc28ea63abbcef7a546">&#9670;&#160;</a></span>set_studentBST()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Database::set_studentBST </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_b_s_t.html">BST</a>&lt; <a class="el" href="class_student.html">Student</a> &gt;&#160;</td>
+          <td class="paramname"><em>tree</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43b97c11fc585d8b0180e1266c0b3183" name="a43b97c11fc585d8b0180e1266c0b3183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43b97c11fc585d8b0180e1266c0b3183">&#9670;&#160;</a></span>verifyUc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,8 +242,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Database::verifyUc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_uc_list.html">UcList</a>&#160;</td>
-          <td class="paramname"><em>uclist</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>

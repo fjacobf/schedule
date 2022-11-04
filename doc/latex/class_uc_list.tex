@@ -2,6 +2,11 @@
 \label{class_uc_list}\index{UcList@{UcList}}
 
 
+Classe para guardar a lista de UCs na classe \mbox{\hyperlink{class_database}{Database}}.  
+
+
+
+
 {\ttfamily \#include $<$Uc\+List.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
@@ -12,8 +17,17 @@ void \mbox{\hyperlink{class_uc_list_aaf0facf94285aeba56524139d01358b9}{add\+Uc}}
 bool \mbox{\hyperlink{class_uc_list_a10a728d32bdd96678b31d2dc796432a7}{exists}} (\mbox{\hyperlink{class_uc}{Uc}} uni)
 \item 
 list$<$ \mbox{\hyperlink{class_uc}{Uc}} $>$ \mbox{\hyperlink{class_uc_list_a2a024bfebb5ff7d24c0476093c764258}{getlist}} ()
+\item 
+bool \mbox{\hyperlink{class_uc_list_a9d7874b21f854242d201d53b1e57f1cf}{equilibrium}} (string uc)
+\item 
+list$<$ \mbox{\hyperlink{class_time__slot}{Time\+\_\+slot}} $>$ \mbox{\hyperlink{class_uc_list_adf790ad41e11751f83b79063af0fb45f}{get\+Time\+Slot}} (string uc, string classe)
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Classe para guardar a lista de UCs na classe \mbox{\hyperlink{class_database}{Database}}. 
+
+Uma cadeira é identificada por um código e tem um conjunto de turmas. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_uc_list_aaf0facf94285aeba56524139d01358b9}\label{class_uc_list_aaf0facf94285aeba56524139d01358b9}} 
@@ -21,6 +35,12 @@ list$<$ \mbox{\hyperlink{class_uc}{Uc}} $>$ \mbox{\hyperlink{class_uc_list_a2a02
 \index{addUc@{addUc}!UcList@{UcList}}
 \doxysubsubsection{\texorpdfstring{addUc()}{addUc()}}
 {\footnotesize\ttfamily void Uc\+List\+::add\+Uc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_uc}{Uc}}}]{uni }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_uc_list_a9d7874b21f854242d201d53b1e57f1cf}\label{class_uc_list_a9d7874b21f854242d201d53b1e57f1cf}} 
+\index{UcList@{UcList}!equilibrium@{equilibrium}}
+\index{equilibrium@{equilibrium}!UcList@{UcList}}
+\doxysubsubsection{\texorpdfstring{equilibrium()}{equilibrium()}}
+{\footnotesize\ttfamily bool Uc\+List\+::equilibrium (\begin{DoxyParamCaption}\item[{string}]{uc }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_uc_list_a10a728d32bdd96678b31d2dc796432a7}\label{class_uc_list_a10a728d32bdd96678b31d2dc796432a7}} 
 \index{UcList@{UcList}!exists@{exists}}
@@ -33,4 +53,10 @@ list$<$ \mbox{\hyperlink{class_uc}{Uc}} $>$ \mbox{\hyperlink{class_uc_list_a2a02
 \index{getlist@{getlist}!UcList@{UcList}}
 \doxysubsubsection{\texorpdfstring{getlist()}{getlist()}}
 {\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_uc}{Uc}} $>$ Uc\+List\+::getlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_uc_list_adf790ad41e11751f83b79063af0fb45f}\label{class_uc_list_adf790ad41e11751f83b79063af0fb45f}} 
+\index{UcList@{UcList}!getTimeSlot@{getTimeSlot}}
+\index{getTimeSlot@{getTimeSlot}!UcList@{UcList}}
+\doxysubsubsection{\texorpdfstring{getTimeSlot()}{getTimeSlot()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_time__slot}{Time\+\_\+slot}} $>$ Uc\+List\+::get\+Time\+Slot (\begin{DoxyParamCaption}\item[{string}]{uc,  }\item[{string}]{classe }\end{DoxyParamCaption})}
 

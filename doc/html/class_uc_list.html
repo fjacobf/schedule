@@ -30,7 +30,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">AED Project<span id="projectnumber">&#160;early-alpha</span>
+   <div id="projectname">AED Project<span id="projectnumber">&#160;final</span>
    </div>
    <div id="projectbrief">Time for the students</div>
   </td>
@@ -103,6 +103,9 @@ $(document).ready(function(){initNavTree('class_uc_list.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 
+<p>Classe para guardar a lista de UCs na classe <a class="el" href="class_database.html" title="Classe para a database.">Database</a>.  
+ <a href="class_uc_list.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_uc_list_8h_source.html">UcList.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -113,8 +116,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a10a728d32bdd96678b31d2dc796432a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a024bfebb5ff7d24c0476093c764258"><td class="memItemLeft" align="right" valign="top">list&lt; <a class="el" href="class_uc.html">Uc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uc_list.html#a2a024bfebb5ff7d24c0476093c764258">getlist</a> ()</td></tr>
 <tr class="separator:a2a024bfebb5ff7d24c0476093c764258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7874b21f854242d201d53b1e57f1cf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uc_list.html#a9d7874b21f854242d201d53b1e57f1cf">equilibrium</a> (string uc)</td></tr>
+<tr class="separator:a9d7874b21f854242d201d53b1e57f1cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf790ad41e11751f83b79063af0fb45f"><td class="memItemLeft" align="right" valign="top">list&lt; <a class="el" href="class_time__slot.html">Time_slot</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uc_list.html#adf790ad41e11751f83b79063af0fb45f">getTimeSlot</a> (string uc, string classe)</td></tr>
+<tr class="separator:adf790ad41e11751f83b79063af0fb45f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Classe para guardar a lista de UCs na classe <a class="el" href="class_database.html" title="Classe para a database.">Database</a>. </p>
+<p >Uma cadeira é identificada por um código e tem um conjunto de turmas. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aaf0facf94285aeba56524139d01358b9" name="aaf0facf94285aeba56524139d01358b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf0facf94285aeba56524139d01358b9">&#9670;&#160;</a></span>addUc()</h2>
 
@@ -126,6 +136,24 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_uc.html">Uc</a>&#160;</td>
           <td class="paramname"><em>uni</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d7874b21f854242d201d53b1e57f1cf" name="a9d7874b21f854242d201d53b1e57f1cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d7874b21f854242d201d53b1e57f1cf">&#9670;&#160;</a></span>equilibrium()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UcList::equilibrium </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>uc</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -162,6 +190,34 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf790ad41e11751f83b79063af0fb45f" name="adf790ad41e11751f83b79063af0fb45f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf790ad41e11751f83b79063af0fb45f">&#9670;&#160;</a></span>getTimeSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list&lt; <a class="el" href="class_time__slot.html">Time_slot</a> &gt; UcList::getTimeSlot </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>uc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>classe</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

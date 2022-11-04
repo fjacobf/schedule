@@ -2,6 +2,11 @@
 \label{class_database}\index{Database@{Database}}
 
 
+Classe para a database.  
+
+
+
+
 {\ttfamily \#include $<$Database.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
@@ -13,13 +18,20 @@
 \item 
 \mbox{\hyperlink{class_database_a4703c80e6969d33565ea340f768fdadf}{Database}} ()
 \item 
-void \mbox{\hyperlink{class_database_a9fda86979e8b2aa35e585c88c1974164}{verify\+Uc}} (\mbox{\hyperlink{class_uc_list}{Uc\+List}} uclist)
+void \mbox{\hyperlink{class_database_a43b97c11fc585d8b0180e1266c0b3183}{verify\+Uc}} ()
 \item 
 void \mbox{\hyperlink{class_database_a64927a643944bea370149e976a58c36a}{read\+Student\+\_\+classes\+File}} ()
+\item 
+void \mbox{\hyperlink{class_database_ac9be694385251bc28ea63abbcef7a546}{set\+\_\+student\+BST}} (\mbox{\hyperlink{class_b_s_t}{BST}}$<$ \mbox{\hyperlink{class_student}{Student}} $>$ tree)
 \item 
 \mbox{\hyperlink{class_b_s_t}{BST}}$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \mbox{\hyperlink{class_database_a18f958c2ecd596dfffd1bb75fe8fc064}{get\+Student\+BST}} ()
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Classe para a database. 
+
+Onde todos os dados são guardados. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_database_a4703c80e6969d33565ea340f768fdadf}\label{class_database_a4703c80e6969d33565ea340f768fdadf}} 
@@ -55,9 +67,15 @@ void \mbox{\hyperlink{class_database_a64927a643944bea370149e976a58c36a}{read\+St
 \doxysubsubsection{\texorpdfstring{readStudent\_classesFile()}{readStudent\_classesFile()}}
 {\footnotesize\ttfamily void Database\+::read\+Student\+\_\+classes\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_database_a9fda86979e8b2aa35e585c88c1974164}\label{class_database_a9fda86979e8b2aa35e585c88c1974164}} 
+\mbox{\Hypertarget{class_database_ac9be694385251bc28ea63abbcef7a546}\label{class_database_ac9be694385251bc28ea63abbcef7a546}} 
+\index{Database@{Database}!set\_studentBST@{set\_studentBST}}
+\index{set\_studentBST@{set\_studentBST}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{set\_studentBST()}{set\_studentBST()}}
+{\footnotesize\ttfamily void Database\+::set\+\_\+student\+BST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_s_t}{BST}}$<$ \mbox{\hyperlink{class_student}{Student}} $>$}]{tree }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_database_a43b97c11fc585d8b0180e1266c0b3183}\label{class_database_a43b97c11fc585d8b0180e1266c0b3183}} 
 \index{Database@{Database}!verifyUc@{verifyUc}}
 \index{verifyUc@{verifyUc}!Database@{Database}}
 \doxysubsubsection{\texorpdfstring{verifyUc()}{verifyUc()}}
-{\footnotesize\ttfamily void Database\+::verify\+Uc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_uc_list}{Uc\+List}}}]{uclist }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Database\+::verify\+Uc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 

@@ -11,18 +11,28 @@
 \DoxyCodeLine{7 }
 \DoxyCodeLine{8 }
 \DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_database_8h}{Database.h}}"{}}}
-\DoxyCodeLine{10 }
-\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_menu}{Menu}} \{}
-\DoxyCodeLine{12 \textcolor{keyword}{private}:}
-\DoxyCodeLine{13     \mbox{\hyperlink{class_database}{Database}} database;}
-\DoxyCodeLine{14     \textcolor{keywordtype}{void} showTimeTable(\textcolor{keywordtype}{string} a);}
-\DoxyCodeLine{15 \textcolor{keyword}{public}:}
-\DoxyCodeLine{16     \mbox{\hyperlink{class_menu_ad466dd83355124a6ed958430450bfe94}{Menu}}();}
-\DoxyCodeLine{17     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_menu_a2e196016a6d46cdc46af8749d084dc43}{displayMenu}}();}
-\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a28e09fb6446b92e207c5b4a258c3b7dc}{listStudents}}();}
-\DoxyCodeLine{19 \};}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{21 }
-\DoxyCodeLine{22 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//SCHEDULE\_MENU\_H}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{alteration_8h}{alteration.h}}"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_menu}{Menu}} \{}
+\DoxyCodeLine{16 \textcolor{keyword}{private}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_database}{Database}} database;}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} showTimeTable(\textcolor{keywordtype}{string} a);}
+\DoxyCodeLine{19     queue<alteration> alt;}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_menu_ad466dd83355124a6ed958430450bfe94}{Menu}}();}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_menu_a2e196016a6d46cdc46af8749d084dc43}{displayMenu}}();}
+\DoxyCodeLine{24     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_menu_a45c46b7c959211a176f7c016c1fedd0d}{inputTest}}(\textcolor{keywordtype}{char} choice, vector<int> values);}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_ac43c1c1e767f70adbecc90015bd87ade}{studentListSubmenu}}();}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_af2d8c22d5ad4b3b230b0ef2e8ae4d979}{listStudents}}(\textcolor{keywordtype}{int} option);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_ab160fdc7e3fafe507a6c1cb4eecad55b}{alteration\_run}}();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     list<Time\_slot> \mbox{\hyperlink{class_menu_a4107dacdd64502240dfedb084b974577}{gettimetable}}(\textcolor{keywordtype}{int} code);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     list<struct Student> \mbox{\hyperlink{class_menu_ac2a973a74d498075f2e37b9e0b0b382e}{studentOrdenationSubmenu}}(list<Student> studentsList);}
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//SCHEDULE\_MENU\_H}}
 
 \end{DoxyCode}

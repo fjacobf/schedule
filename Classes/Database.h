@@ -16,7 +16,9 @@
 #include "Student.h"
 
 using namespace std;
-
+///Classe para a database.
+///
+///Onde todos os dados são guardados.
 class Database {
 private:
     BST<Student> studentsBST = BST<Student>(Student(0,"a"));

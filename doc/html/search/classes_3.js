@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iteratorbst_0',['iteratorBST',['../classiterator_b_s_t.html',1,'']]]
+  ['database_0',['Database',['../class_database.html',1,'']]]
 ];

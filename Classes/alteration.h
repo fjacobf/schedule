@@ -7,6 +7,9 @@
 
 
 #include "Student.h"
+///Classe para as alterações de horário.
+///
+///Um estudante pode pedir alterações no seu horário.
 
 class alteration {
 private:

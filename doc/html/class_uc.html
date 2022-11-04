@@ -30,7 +30,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">AED Project<span id="projectnumber">&#160;early-alpha</span>
+   <div id="projectname">AED Project<span id="projectnumber">&#160;final</span>
    </div>
    <div id="projectbrief">Time for the students</div>
   </td>
@@ -103,6 +103,9 @@ $(document).ready(function(){initNavTree('class_uc.html',''); initResizable(); }
 </div><!--header-->
 <div class="contents">
 
+<p>Classe para as Cadeiras.  
+ <a href="class_uc.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_uc_8h_source.html">Uc.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -111,8 +114,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a57d7e55678679dc5b12182cb30287044"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e8e0e8f0313b4a642141094a08ad740"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uc.html#a4e8e0e8f0313b4a642141094a08ad740">insertClass</a> (<a class="el" href="class_class.html">Class</a> classes)</td></tr>
 <tr class="separator:a4e8e0e8f0313b4a642141094a08ad740"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a633ef57e70835ffad02718d7d4b26973"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uc.html#a633ef57e70835ffad02718d7d4b26973">getUcCode</a> ()</td></tr>
-<tr class="separator:a633ef57e70835ffad02718d7d4b26973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b9fa6366a08ddf30f0d03342e89a01a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uc.html#a2b9fa6366a08ddf30f0d03342e89a01a">getUcCode</a> () const</td></tr>
+<tr class="separator:a2b9fa6366a08ddf30f0d03342e89a01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a174190aa3e2329c6cd133202c20c21bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uc.html#a174190aa3e2329c6cd133202c20c21bc">SetUcCode</a> (string code)</td></tr>
 <tr class="separator:a174190aa3e2329c6cd133202c20c21bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af34af4e15bf87e376b741ebe7f78227c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uc.html#af34af4e15bf87e376b741ebe7f78227c">eraselist</a> ()</td></tr>
@@ -122,7 +125,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a80ef0956e158a516d36be2a27e0d1281"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uc.html#a80ef0956e158a516d36be2a27e0d1281">Uc</a> ()</td></tr>
 <tr class="separator:a80ef0956e158a516d36be2a27e0d1281"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Classe para as Cadeiras. </p>
+<p >Uma cadeira é identificada por um código e tem um conjunto de turmas. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a57d7e55678679dc5b12182cb30287044" name="a57d7e55678679dc5b12182cb30287044"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a57d7e55678679dc5b12182cb30287044">&#9670;&#160;</a></span>Uc() <span class="overload">[1/2]</span></h2>
 
@@ -193,8 +199,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a633ef57e70835ffad02718d7d4b26973" name="a633ef57e70835ffad02718d7d4b26973"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a633ef57e70835ffad02718d7d4b26973">&#9670;&#160;</a></span>getUcCode()</h2>
+<a id="a2b9fa6366a08ddf30f0d03342e89a01a" name="a2b9fa6366a08ddf30f0d03342e89a01a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b9fa6366a08ddf30f0d03342e89a01a">&#9670;&#160;</a></span>getUcCode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,7 +209,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">string Uc::getUcCode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">

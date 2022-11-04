@@ -22,22 +22,30 @@ long int \mbox{\hyperlink{class_student_ae42d9768dc13bd1a3f50b4f410579d71}{getco
 \item 
 string \mbox{\hyperlink{class_student_a7930854c6bddef61a6883b10ed651183}{getname}} () const
 \item 
+int \mbox{\hyperlink{class_student_af3c07982630a94ef946bff7fcf4ec0cf}{getyear}} () const
+\item 
 list$<$ \mbox{\hyperlink{class_class}{Class}} $>$ \mbox{\hyperlink{class_student_a7f040a07896813e615ca41ee4c5d49ec}{getclasses}} ()
 \item 
 void \mbox{\hyperlink{class_student_a055188589afd04671f5500e125007ff3}{setcode}} (long int n)
 \item 
 void \mbox{\hyperlink{class_student_a631b721fa1276cbb5939944170fa99df}{setname}} (string n)
 \item 
+void \mbox{\hyperlink{class_student_a0530c753aaa631ffd69de407e0c60398}{setyear}} (int n)
+\item 
 void \mbox{\hyperlink{class_student_aa66c65d4f149db37a4fdfceb49d4b2f9}{insert\+Class}} (\mbox{\hyperlink{class_class}{Class}} classe)
+\item 
+void \mbox{\hyperlink{class_student_a1262c1a0a1f01d2fc56a69ea78c7180e}{pop\+Class}} (\mbox{\hyperlink{class_class}{Class}} classe)
 \item 
 bool \mbox{\hyperlink{class_student_a9fa16bcc2db2fa13a47e729b6dbc7ab3}{operator==}} (const \mbox{\hyperlink{class_student}{Student}} \&student) const
 \item 
 bool \mbox{\hyperlink{class_student_a813c8079bd32dd95c8bab5af53b2f9a0}{operator$<$}} (const \mbox{\hyperlink{class_student}{Student}} \&student) const
+\item 
+list$<$ \mbox{\hyperlink{class_time__slot}{Time\+\_\+slot}} $>$ \mbox{\hyperlink{class_student_a625a651999a647e37014452be2e42bf0}{gettimetable}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-std\+::ostream \& \mbox{\hyperlink{class_student_a5cb9860e753e6a2418dd59b739d3f4b2}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{class_student}{Student}} \&stu)
+std\+::ostream \& \mbox{\hyperlink{class_student_a3927a6e81bf7a6bbb4a2322f13f4ac0e}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_student}{Student}} \&student)
 \end{DoxyCompactItemize}
 
 
@@ -86,6 +94,18 @@ Um estudante é identificado por um código e nome, e tem um horário associado.
 \doxysubsubsection{\texorpdfstring{getname()}{getname()}}
 {\footnotesize\ttfamily string Student\+::getname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\mbox{\Hypertarget{class_student_a625a651999a647e37014452be2e42bf0}\label{class_student_a625a651999a647e37014452be2e42bf0}} 
+\index{Student@{Student}!gettimetable@{gettimetable}}
+\index{gettimetable@{gettimetable}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{gettimetable()}{gettimetable()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_time__slot}{Time\+\_\+slot}} $>$ Student\+::gettimetable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_student_af3c07982630a94ef946bff7fcf4ec0cf}\label{class_student_af3c07982630a94ef946bff7fcf4ec0cf}} 
+\index{Student@{Student}!getyear@{getyear}}
+\index{getyear@{getyear}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{getyear()}{getyear()}}
+{\footnotesize\ttfamily int Student\+::getyear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 \mbox{\Hypertarget{class_student_aa66c65d4f149db37a4fdfceb49d4b2f9}\label{class_student_aa66c65d4f149db37a4fdfceb49d4b2f9}} 
 \index{Student@{Student}!insertClass@{insertClass}}
 \index{insertClass@{insertClass}!Student@{Student}}
@@ -104,6 +124,12 @@ Um estudante é identificado por um código e nome, e tem um horário associado.
 \doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
 {\footnotesize\ttfamily bool Student\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{student }\end{DoxyParamCaption}) const}
 
+\mbox{\Hypertarget{class_student_a1262c1a0a1f01d2fc56a69ea78c7180e}\label{class_student_a1262c1a0a1f01d2fc56a69ea78c7180e}} 
+\index{Student@{Student}!popClass@{popClass}}
+\index{popClass@{popClass}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{popClass()}{popClass()}}
+{\footnotesize\ttfamily void Student\+::pop\+Class (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_class}{Class}}}]{classe }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{class_student_a055188589afd04671f5500e125007ff3}\label{class_student_a055188589afd04671f5500e125007ff3}} 
 \index{Student@{Student}!setcode@{setcode}}
 \index{setcode@{setcode}!Student@{Student}}
@@ -116,12 +142,18 @@ Um estudante é identificado por um código e nome, e tem um horário associado.
 \doxysubsubsection{\texorpdfstring{setname()}{setname()}}
 {\footnotesize\ttfamily void Student\+::setname (\begin{DoxyParamCaption}\item[{string}]{n }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{class_student_a0530c753aaa631ffd69de407e0c60398}\label{class_student_a0530c753aaa631ffd69de407e0c60398}} 
+\index{Student@{Student}!setyear@{setyear}}
+\index{setyear@{setyear}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{setyear()}{setyear()}}
+{\footnotesize\ttfamily void Student\+::setyear (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Friends And Related Function Documentation}
-\mbox{\Hypertarget{class_student_a5cb9860e753e6a2418dd59b739d3f4b2}\label{class_student_a5cb9860e753e6a2418dd59b739d3f4b2}} 
+\mbox{\Hypertarget{class_student_a3927a6e81bf7a6bbb4a2322f13f4ac0e}\label{class_student_a3927a6e81bf7a6bbb4a2322f13f4ac0e}} 
 \index{Student@{Student}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!Student@{Student}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
-{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{stu }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{student }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 

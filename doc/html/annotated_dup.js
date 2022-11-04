@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "alteration", "classalteration.html", "classalteration" ],
     [ "BinaryNode", "class_binary_node.html", "class_binary_node" ],
     [ "BST", "class_b_s_t.html", "class_b_s_t" ],
     [ "BSTItrIn", "class_b_s_t_itr_in.html", "class_b_s_t_itr_in" ],
