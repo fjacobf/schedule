@@ -12,7 +12,13 @@ Classe para guardar a lista de UCs na classe \mbox{\hyperlink{class_database}{Da
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_uc_list_a55c2e0f99e9c909b2286c5cbae64fdca}{Uc\+List}} ()
+\item 
+\mbox{\hyperlink{class_uc_list_aad2a3a2d42649101953617bd40faf7d9}{Uc\+List}} (list$<$ \mbox{\hyperlink{class_uc}{Uc}} $>$ uc)
+\item 
 void \mbox{\hyperlink{class_uc_list_aaf0facf94285aeba56524139d01358b9}{add\+Uc}} (\mbox{\hyperlink{class_uc}{Uc}} uni)
+\item 
+void \mbox{\hyperlink{class_uc_list_ab62f33d555036334225fdcecb5c83e33}{remove\+UC}} (\mbox{\hyperlink{class_uc}{Uc}} uni)
 \item 
 bool \mbox{\hyperlink{class_uc_list_a10a728d32bdd96678b31d2dc796432a7}{exists}} (\mbox{\hyperlink{class_uc}{Uc}} uni)
 \item 
@@ -28,6 +34,21 @@ list$<$ \mbox{\hyperlink{class_time__slot}{Time\+\_\+slot}} $>$ \mbox{\hyperlink
 Classe para guardar a lista de UCs na classe \mbox{\hyperlink{class_database}{Database}}. 
 
 Uma cadeira é identificada por um código e tem um conjunto de turmas. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_uc_list_a55c2e0f99e9c909b2286c5cbae64fdca}\label{class_uc_list_a55c2e0f99e9c909b2286c5cbae64fdca}} 
+\index{UcList@{UcList}!UcList@{UcList}}
+\index{UcList@{UcList}!UcList@{UcList}}
+\doxysubsubsection{\texorpdfstring{UcList()}{UcList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Uc\+List\+::\+Uc\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_uc_list_aad2a3a2d42649101953617bd40faf7d9}\label{class_uc_list_aad2a3a2d42649101953617bd40faf7d9}} 
+\index{UcList@{UcList}!UcList@{UcList}}
+\index{UcList@{UcList}!UcList@{UcList}}
+\doxysubsubsection{\texorpdfstring{UcList()}{UcList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Uc\+List\+::\+Uc\+List (\begin{DoxyParamCaption}\item[{list$<$ \mbox{\hyperlink{class_uc}{Uc}} $>$}]{uc }\end{DoxyParamCaption})}
+
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_uc_list_aaf0facf94285aeba56524139d01358b9}\label{class_uc_list_aaf0facf94285aeba56524139d01358b9}} 
@@ -59,4 +80,10 @@ Uma cadeira é identificada por um código e tem um conjunto de turmas.
 \index{getTimeSlot@{getTimeSlot}!UcList@{UcList}}
 \doxysubsubsection{\texorpdfstring{getTimeSlot()}{getTimeSlot()}}
 {\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_time__slot}{Time\+\_\+slot}} $>$ Uc\+List\+::get\+Time\+Slot (\begin{DoxyParamCaption}\item[{string}]{uc,  }\item[{string}]{classe }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_uc_list_ab62f33d555036334225fdcecb5c83e33}\label{class_uc_list_ab62f33d555036334225fdcecb5c83e33}} 
+\index{UcList@{UcList}!removeUC@{removeUC}}
+\index{removeUC@{removeUC}!UcList@{UcList}}
+\doxysubsubsection{\texorpdfstring{removeUC()}{removeUC()}}
+{\footnotesize\ttfamily void Uc\+List\+::remove\+UC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_uc}{Uc}}}]{uni }\end{DoxyParamCaption})}
 

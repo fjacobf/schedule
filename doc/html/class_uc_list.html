@@ -110,8 +110,14 @@ $(document).ready(function(){initNavTree('class_uc_list.html',''); initResizable
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a55c2e0f99e9c909b2286c5cbae64fdca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uc_list.html#a55c2e0f99e9c909b2286c5cbae64fdca">UcList</a> ()</td></tr>
+<tr class="separator:a55c2e0f99e9c909b2286c5cbae64fdca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad2a3a2d42649101953617bd40faf7d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uc_list.html#aad2a3a2d42649101953617bd40faf7d9">UcList</a> (list&lt; <a class="el" href="class_uc.html">Uc</a> &gt; uc)</td></tr>
+<tr class="separator:aad2a3a2d42649101953617bd40faf7d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf0facf94285aeba56524139d01358b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uc_list.html#aaf0facf94285aeba56524139d01358b9">addUc</a> (<a class="el" href="class_uc.html">Uc</a> uni)</td></tr>
 <tr class="separator:aaf0facf94285aeba56524139d01358b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62f33d555036334225fdcecb5c83e33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uc_list.html#ab62f33d555036334225fdcecb5c83e33">removeUC</a> (<a class="el" href="class_uc.html">Uc</a> uni)</td></tr>
+<tr class="separator:ab62f33d555036334225fdcecb5c83e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10a728d32bdd96678b31d2dc796432a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uc_list.html#a10a728d32bdd96678b31d2dc796432a7">exists</a> (<a class="el" href="class_uc.html">Uc</a> uni)</td></tr>
 <tr class="separator:a10a728d32bdd96678b31d2dc796432a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a024bfebb5ff7d24c0476093c764258"><td class="memItemLeft" align="right" valign="top">list&lt; <a class="el" href="class_uc.html">Uc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uc_list.html#a2a024bfebb5ff7d24c0476093c764258">getlist</a> ()</td></tr>
@@ -124,7 +130,43 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Classe para guardar a lista de UCs na classe <a class="el" href="class_database.html" title="Classe para a database.">Database</a>. </p>
 <p >Uma cadeira é identificada por um código e tem um conjunto de turmas. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a55c2e0f99e9c909b2286c5cbae64fdca" name="a55c2e0f99e9c909b2286c5cbae64fdca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55c2e0f99e9c909b2286c5cbae64fdca">&#9670;&#160;</a></span>UcList() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UcList::UcList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad2a3a2d42649101953617bd40faf7d9" name="aad2a3a2d42649101953617bd40faf7d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad2a3a2d42649101953617bd40faf7d9">&#9670;&#160;</a></span>UcList() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UcList::UcList </td>
+          <td>(</td>
+          <td class="paramtype">list&lt; <a class="el" href="class_uc.html">Uc</a> &gt;&#160;</td>
+          <td class="paramname"><em>uc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="aaf0facf94285aeba56524139d01358b9" name="aaf0facf94285aeba56524139d01358b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf0facf94285aeba56524139d01358b9">&#9670;&#160;</a></span>addUc()</h2>
 
@@ -218,6 +260,24 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab62f33d555036334225fdcecb5c83e33" name="ab62f33d555036334225fdcecb5c83e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab62f33d555036334225fdcecb5c83e33">&#9670;&#160;</a></span>removeUC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UcList::removeUC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_uc.html">Uc</a>&#160;</td>
+          <td class="paramname"><em>uni</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

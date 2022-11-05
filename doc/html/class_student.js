@@ -14,6 +14,6 @@ var class_student =
     [ "popClass", "class_student.html#a1262c1a0a1f01d2fc56a69ea78c7180e", null ],
     [ "setcode", "class_student.html#a055188589afd04671f5500e125007ff3", null ],
     [ "setname", "class_student.html#a631b721fa1276cbb5939944170fa99df", null ],
-    [ "setyear", "class_student.html#a0530c753aaa631ffd69de407e0c60398", null ],
+    [ "setyear", "class_student.html#ab294e2e2f265b893639756877e45911c", null ],
     [ "operator<<", "class_student.html#a3927a6e81bf7a6bbb4a2322f13f4ac0e", null ]
 ];

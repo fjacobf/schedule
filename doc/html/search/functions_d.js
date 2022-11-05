@@ -13,7 +13,7 @@ var searchData=
   ['setuccode_10',['setUcCode',['../class_class.html#a3f70146e4061064a3ec336ce1b13e614',1,'Class']]],
   ['setuccode_11',['SetUcCode',['../class_uc.html#a174190aa3e2329c6cd133202c20c21bc',1,'Uc']]],
   ['setweekday_12',['setweekday',['../class_time__slot.html#a96e2f5d32e3124b8d2b20cda893b0589',1,'Time_slot']]],
-  ['setyear_13',['setyear',['../class_student.html#a0530c753aaa631ffd69de407e0c60398',1,'Student']]],
+  ['setyear_13',['setyear',['../class_student.html#ab294e2e2f265b893639756877e45911c',1,'Student']]],
   ['sortclassbycapacityasc_14',['sortClassByCapacityAsc',['../_sort_form_8cpp.html#ad1a140776bbb8a151cfa4022a2833408',1,'SortForm.cpp']]],
   ['sortclassbycapacitydsc_15',['sortClassByCapacityDsc',['../_sort_form_8cpp.html#a45f8843ca5d633cf9d518b172f8c6083',1,'SortForm.cpp']]],
   ['sortclassbycodeasc_16',['sortClassByCodeAsc',['../_sort_form_8cpp.html#a57e26306d73bc04f9253b5b9a833720a',1,'SortForm.cpp']]],
@@ -32,5 +32,6 @@ var searchData=
   ['sortucbyuccodedsc_29',['sortUcByUcCodeDsc',['../_sort_form_8cpp.html#afc16321ba6eecd9140e3faa7de9c1d3c',1,'SortForm.cpp']]],
   ['student_30',['Student',['../class_student.html#ac344160c81a282a3a39f61abc84dd792',1,'Student::Student(int studentCode, string name, Class classe)'],['../class_student.html#a064ed91efab4e8a0e74b73c55305e578',1,'Student::Student(int studentCode, string name)'],['../class_student.html#af9168cedbfa5565cf0b20c1a9d3f5c9d',1,'Student::Student()']]],
   ['studentlistsubmenu_31',['studentListSubmenu',['../class_menu.html#ac43c1c1e767f70adbecc90015bd87ade',1,'Menu']]],
-  ['studentordenationsubmenu_32',['studentOrdenationSubmenu',['../class_menu.html#ac2a973a74d498075f2e37b9e0b0b382e',1,'Menu']]]
+  ['studentordenationsubmenu_32',['studentOrdenationSubmenu',['../class_menu.html#ac2a973a74d498075f2e37b9e0b0b382e',1,'Menu']]],
+  ['studenttimetablesubmenu_33',['studentTimetableSubmenu',['../class_menu.html#a720c421007021677a178299e9db22440',1,'Menu']]]
 ];

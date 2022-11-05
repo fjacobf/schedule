@@ -20,13 +20,21 @@ bool \mbox{\hyperlink{class_menu_a45c46b7c959211a176f7c016c1fedd0d}{input\+Test}
 \begin{DoxyCompactList}\small\item\em Tests if the. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_menu_ac43c1c1e767f70adbecc90015bd87ade}{student\+List\+Submenu}} ()
 \begin{DoxyCompactList}\small\item\em The submenu for option \mbox{[}21\mbox{]}\mbox{\hyperlink{class_student}{Student}} List. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_menu_af2d8c22d5ad4b3b230b0ef2e8ae4d979}{list\+Students}} (int option)
+list$<$ struct \mbox{\hyperlink{class_student}{Student}} $>$ \mbox{\hyperlink{class_menu_a33ef85a46cfafe9bf1895e0dab5575cc}{list\+Students}} (int option, string key)
 \begin{DoxyCompactList}\small\item\em Recieves an integer that controls how the students will be listed. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_menu_ab160fdc7e3fafe507a6c1cb4eecad55b}{alteration\+\_\+run}} ()
+\item 
+void \mbox{\hyperlink{class_menu_adec0d56f12a933c91e2c24725909aff9}{alterations\+Submenu}} ()
 \item 
 list$<$ \mbox{\hyperlink{class_time__slot}{Time\+\_\+slot}} $>$ \mbox{\hyperlink{class_menu_a4107dacdd64502240dfedb084b974577}{gettimetable}} (int code)
 \item 
 list$<$ struct \mbox{\hyperlink{class_student}{Student}} $>$ \mbox{\hyperlink{class_menu_ac2a973a74d498075f2e37b9e0b0b382e}{student\+Ordenation\+Submenu}} (list$<$ \mbox{\hyperlink{class_student}{Student}} $>$ students\+List)
+\item 
+void \mbox{\hyperlink{class_menu_a66bfcd7feed22bffdf67e95cdc187bba}{ocupation\+Submenu}} (int choice, string key)
+\item 
+void \mbox{\hyperlink{class_menu_a80a0b224b7eda1e69c8fd176eb6c0a28}{class\+Timetable}} (string a)
+\item 
+void \mbox{\hyperlink{class_menu_a720c421007021677a178299e9db22440}{student\+Timetable\+Submenu}} ()
 \end{DoxyCompactItemize}
 
 
@@ -50,6 +58,18 @@ O menu é essencial para o projeto.
 \index{alteration\_run@{alteration\_run}!Menu@{Menu}}
 \doxysubsubsection{\texorpdfstring{alteration\_run()}{alteration\_run()}}
 {\footnotesize\ttfamily void Menu\+::alteration\+\_\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_menu_adec0d56f12a933c91e2c24725909aff9}\label{class_menu_adec0d56f12a933c91e2c24725909aff9}} 
+\index{Menu@{Menu}!alterationsSubmenu@{alterationsSubmenu}}
+\index{alterationsSubmenu@{alterationsSubmenu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{alterationsSubmenu()}{alterationsSubmenu()}}
+{\footnotesize\ttfamily void Menu\+::alterations\+Submenu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_menu_a80a0b224b7eda1e69c8fd176eb6c0a28}\label{class_menu_a80a0b224b7eda1e69c8fd176eb6c0a28}} 
+\index{Menu@{Menu}!classTimetable@{classTimetable}}
+\index{classTimetable@{classTimetable}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{classTimetable()}{classTimetable()}}
+{\footnotesize\ttfamily void Menu\+::class\+Timetable (\begin{DoxyParamCaption}\item[{string}]{a }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_menu_a2e196016a6d46cdc46af8749d084dc43}\label{class_menu_a2e196016a6d46cdc46af8749d084dc43}} 
 \index{Menu@{Menu}!displayMenu@{displayMenu}}
@@ -80,15 +100,21 @@ Tests if the.
 {\em values} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_menu_af2d8c22d5ad4b3b230b0ef2e8ae4d979}\label{class_menu_af2d8c22d5ad4b3b230b0ef2e8ae4d979}} 
+\mbox{\Hypertarget{class_menu_a33ef85a46cfafe9bf1895e0dab5575cc}\label{class_menu_a33ef85a46cfafe9bf1895e0dab5575cc}} 
 \index{Menu@{Menu}!listStudents@{listStudents}}
 \index{listStudents@{listStudents}!Menu@{Menu}}
 \doxysubsubsection{\texorpdfstring{listStudents()}{listStudents()}}
-{\footnotesize\ttfamily void Menu\+::list\+Students (\begin{DoxyParamCaption}\item[{int}]{option }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_student}{Student}} $>$ Menu\+::list\+Students (\begin{DoxyParamCaption}\item[{int}]{option,  }\item[{string}]{key }\end{DoxyParamCaption})}
 
 
 
 Recieves an integer that controls how the students will be listed. 
+
+\mbox{\Hypertarget{class_menu_a66bfcd7feed22bffdf67e95cdc187bba}\label{class_menu_a66bfcd7feed22bffdf67e95cdc187bba}} 
+\index{Menu@{Menu}!ocupationSubmenu@{ocupationSubmenu}}
+\index{ocupationSubmenu@{ocupationSubmenu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{ocupationSubmenu()}{ocupationSubmenu()}}
+{\footnotesize\ttfamily void Menu\+::ocupation\+Submenu (\begin{DoxyParamCaption}\item[{int}]{choice,  }\item[{string}]{key }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_menu_ac43c1c1e767f70adbecc90015bd87ade}\label{class_menu_ac43c1c1e767f70adbecc90015bd87ade}} 
 \index{Menu@{Menu}!studentListSubmenu@{studentListSubmenu}}
@@ -105,4 +131,10 @@ The submenu for option \mbox{[}21\mbox{]}\mbox{\hyperlink{class_student}{Student
 \index{studentOrdenationSubmenu@{studentOrdenationSubmenu}!Menu@{Menu}}
 \doxysubsubsection{\texorpdfstring{studentOrdenationSubmenu()}{studentOrdenationSubmenu()}}
 {\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_student}{Student}} $>$ Menu\+::student\+Ordenation\+Submenu (\begin{DoxyParamCaption}\item[{list$<$ \mbox{\hyperlink{class_student}{Student}} $>$}]{students\+List }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_menu_a720c421007021677a178299e9db22440}\label{class_menu_a720c421007021677a178299e9db22440}} 
+\index{Menu@{Menu}!studentTimetableSubmenu@{studentTimetableSubmenu}}
+\index{studentTimetableSubmenu@{studentTimetableSubmenu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{studentTimetableSubmenu()}{studentTimetableSubmenu()}}
+{\footnotesize\ttfamily void Menu\+::student\+Timetable\+Submenu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 

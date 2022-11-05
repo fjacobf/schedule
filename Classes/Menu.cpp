@@ -340,7 +340,7 @@ bool Menu:: inputTest(char choice ,vector<int> values) {
 }
 
 void Menu::alteration_run() {
-    ofstream Myfile("Pedidos_nao_concedidos");
+    ofstream Myfile("Pedidos_nao_concedidos.txt");
     while (!alt.empty()) {
         BST<Student> tree = database.getStudentBST();
         Student aux = tree.find(alt.front().getstudent());

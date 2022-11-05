@@ -14,7 +14,7 @@ var dir_0c68614ac8d8401edbf4146ded722294 =
     [ "Student.h", "_student_8h.html", "_student_8h" ],
     [ "Time_slot.cpp", "_time__slot_8cpp.html", null ],
     [ "Time_slot.h", "_time__slot_8h.html", "_time__slot_8h" ],
-    [ "Uc.cpp", "_uc_8cpp.html", null ],
+    [ "Uc.cpp", "_uc_8cpp.html", "_uc_8cpp" ],
     [ "Uc.h", "_uc_8h.html", "_uc_8h" ],
     [ "UcList.cpp", "_uc_list_8cpp.html", null ],
     [ "UcList.h", "_uc_list_8h.html", "_uc_list_8h" ]

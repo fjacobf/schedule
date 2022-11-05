@@ -14,6 +14,8 @@ Classe para as Cadeiras.
 \item 
 \mbox{\hyperlink{class_uc_a57d7e55678679dc5b12182cb30287044}{Uc}} (string uccode)
 \item 
+\mbox{\hyperlink{class_uc_a80ef0956e158a516d36be2a27e0d1281}{Uc}} ()
+\item 
 void \mbox{\hyperlink{class_uc_a4e8e0e8f0313b4a642141094a08ad740}{insert\+Class}} (\mbox{\hyperlink{class_class}{Class}} classes)
 \item 
 string \mbox{\hyperlink{class_uc_a2b9fa6366a08ddf30f0d03342e89a01a}{get\+Uc\+Code}} () const
@@ -24,7 +26,14 @@ void \mbox{\hyperlink{class_uc_af34af4e15bf87e376b741ebe7f78227c}{eraselist}} ()
 \item 
 list$<$ \mbox{\hyperlink{class_class}{Class}} $>$ \mbox{\hyperlink{class_uc_a708833d47bcb120badcb87a04a57bb08}{get\+Classes\+List}} ()
 \item 
-\mbox{\hyperlink{class_uc_a80ef0956e158a516d36be2a27e0d1281}{Uc}} ()
+bool \mbox{\hyperlink{class_uc_a0516d26d6688d67078fd68f92a7c8c71}{operator==}} (const \mbox{\hyperlink{class_uc}{Uc}} \&c) const
+\item 
+void \mbox{\hyperlink{class_uc_ad366eb89005101feeeedb4894ab8b5ef}{remove}} (\mbox{\hyperlink{class_class}{Class}} a\+Class)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_uc_ae6ec16134b9438447f4545204a250fbc}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_uc}{Uc}} \&uc)
 \end{DoxyCompactItemize}
 
 
@@ -73,9 +82,30 @@ Uma cadeira é identificada por um código e tem um conjunto de turmas.
 \doxysubsubsection{\texorpdfstring{insertClass()}{insertClass()}}
 {\footnotesize\ttfamily void Uc\+::insert\+Class (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_class}{Class}}}]{classes }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{class_uc_a0516d26d6688d67078fd68f92a7c8c71}\label{class_uc_a0516d26d6688d67078fd68f92a7c8c71}} 
+\index{Uc@{Uc}!operator==@{operator==}}
+\index{operator==@{operator==}!Uc@{Uc}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Uc\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_uc}{Uc}} \&}]{c }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_uc_ad366eb89005101feeeedb4894ab8b5ef}\label{class_uc_ad366eb89005101feeeedb4894ab8b5ef}} 
+\index{Uc@{Uc}!remove@{remove}}
+\index{remove@{remove}!Uc@{Uc}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Uc\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_class}{Class}}}]{a\+Class }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{class_uc_a174190aa3e2329c6cd133202c20c21bc}\label{class_uc_a174190aa3e2329c6cd133202c20c21bc}} 
 \index{Uc@{Uc}!SetUcCode@{SetUcCode}}
 \index{SetUcCode@{SetUcCode}!Uc@{Uc}}
 \doxysubsubsection{\texorpdfstring{SetUcCode()}{SetUcCode()}}
 {\footnotesize\ttfamily void Uc\+::\+Set\+Uc\+Code (\begin{DoxyParamCaption}\item[{string}]{code }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_uc_ae6ec16134b9438447f4545204a250fbc}\label{class_uc_ae6ec16134b9438447f4545204a250fbc}} 
+\index{Uc@{Uc}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Uc@{Uc}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_uc}{Uc}} \&}]{uc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 

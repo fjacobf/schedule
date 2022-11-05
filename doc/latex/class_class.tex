@@ -30,12 +30,16 @@ void \mbox{\hyperlink{class_class_a125d4d26a572c8176cccc4cce98a8e08}{set\+Time\+
 \begin{DoxyCompactList}\small\item\em set time\+\_\+slots with \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_class_a870dda83fc0a597d696453e56a0909fe}{insert\+Time\+Slot}} (\mbox{\hyperlink{class_time__slot}{Time\+\_\+slot}} time\+Slot)
 \begin{DoxyCompactList}\small\item\em Insert a new time\+\_\+slot with. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_class_a12112f08ade42ea0986f5506fcbacb65}{Class}} (int c, string uc\+Code, string Class\+Code, \mbox{\hyperlink{class_time__slot}{Time\+\_\+slot}} time\+Slot)
+\mbox{\hyperlink{class_class_a4803c8624b81bf2b8a2dd0d91616a1c3}{Class}} (string uc\+Code, string Class\+Code, \mbox{\hyperlink{class_time__slot}{Time\+\_\+slot}} time\+Slot)
 \begin{DoxyCompactList}\small\item\em creates a new class with a \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_class_a058a5c5c1740c18a940448b1159c9076}{Class}} (int c, string uc\+Code, string Class\+Code)
+\mbox{\hyperlink{class_class_a6174d6496d336f49b33d3ce9c43b7b23}{Class}} (string uc\+Code, string Class\+Code)
 \begin{DoxyCompactList}\small\item\em creates a new class without a Time Slot \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_class_a5b97d41527df822c6b1211931f79ca15}{Class}} ()
+\item 
 bool \mbox{\hyperlink{class_class_a493c660f130d7b1f1a34fd786e51838f}{operator==}} (const \mbox{\hyperlink{class_class}{Class}} \&c) const
-\begin{DoxyCompactList}\small\item\em Operator of equals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Operator of equals. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_class_a421f6c0d70acf476d103a4fd846f834f}{increment\+Capacity}} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -44,11 +48,11 @@ Classe para as Turmas.
 Uma turma é identificada por um código e tem um horário associado. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_class_a12112f08ade42ea0986f5506fcbacb65}\label{class_class_a12112f08ade42ea0986f5506fcbacb65}} 
+\mbox{\Hypertarget{class_class_a4803c8624b81bf2b8a2dd0d91616a1c3}\label{class_class_a4803c8624b81bf2b8a2dd0d91616a1c3}} 
 \index{Class@{Class}!Class@{Class}}
 \index{Class@{Class}!Class@{Class}}
-\doxysubsubsection{\texorpdfstring{Class()}{Class()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Class\+::\+Class (\begin{DoxyParamCaption}\item[{int}]{c,  }\item[{string}]{uc\+Code,  }\item[{string}]{Class\+Code,  }\item[{\mbox{\hyperlink{class_time__slot}{Time\+\_\+slot}}}]{time\+Slot }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Class()}{Class()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Class\+::\+Class (\begin{DoxyParamCaption}\item[{string}]{uc\+Code,  }\item[{string}]{Class\+Code,  }\item[{\mbox{\hyperlink{class_time__slot}{Time\+\_\+slot}}}]{time\+Slot }\end{DoxyParamCaption})}
 
 
 
@@ -59,15 +63,21 @@ creates a new class with a
 {\em \mbox{\hyperlink{class_time__slot}{Time\+\_\+slot}}} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_class_a058a5c5c1740c18a940448b1159c9076}\label{class_class_a058a5c5c1740c18a940448b1159c9076}} 
+\mbox{\Hypertarget{class_class_a6174d6496d336f49b33d3ce9c43b7b23}\label{class_class_a6174d6496d336f49b33d3ce9c43b7b23}} 
 \index{Class@{Class}!Class@{Class}}
 \index{Class@{Class}!Class@{Class}}
-\doxysubsubsection{\texorpdfstring{Class()}{Class()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Class\+::\+Class (\begin{DoxyParamCaption}\item[{int}]{c,  }\item[{string}]{uc\+Code,  }\item[{string}]{Class\+Code }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Class()}{Class()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Class\+::\+Class (\begin{DoxyParamCaption}\item[{string}]{uc\+Code,  }\item[{string}]{Class\+Code }\end{DoxyParamCaption})}
 
 
 
 creates a new class without a Time Slot 
+
+\mbox{\Hypertarget{class_class_a5b97d41527df822c6b1211931f79ca15}\label{class_class_a5b97d41527df822c6b1211931f79ca15}} 
+\index{Class@{Class}!Class@{Class}}
+\index{Class@{Class}!Class@{Class}}
+\doxysubsubsection{\texorpdfstring{Class()}{Class()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Class\+::\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -108,6 +118,12 @@ Time slots
 \begin{DoxyReturn}{Returns}
 Uc\+Code 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_class_a421f6c0d70acf476d103a4fd846f834f}\label{class_class_a421f6c0d70acf476d103a4fd846f834f}} 
+\index{Class@{Class}!incrementCapacity@{incrementCapacity}}
+\index{incrementCapacity@{incrementCapacity}!Class@{Class}}
+\doxysubsubsection{\texorpdfstring{incrementCapacity()}{incrementCapacity()}}
+{\footnotesize\ttfamily void Class\+::increment\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{class_class_a870dda83fc0a597d696453e56a0909fe}\label{class_class_a870dda83fc0a597d696453e56a0909fe}} 
 \index{Class@{Class}!insertTimeSlot@{insertTimeSlot}}
 \index{insertTimeSlot@{insertTimeSlot}!Class@{Class}}
