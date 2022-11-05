@@ -9,6 +9,8 @@ void UcList::addUc(Uc uni) {
     Ucs.push_back(uni);
 }
 
+
+
 bool UcList::exists(Uc uni) {
     for(Uc x : Ucs){
         if(uni.getUcCode() == x.getUcCode())
@@ -51,4 +53,16 @@ list<Time_slot> UcList::getTimeSlot(string uc, string classe) {
                     return c.getTimeSlots();
             }
     }
+}
+
+UcList::UcList(list<Uc> uc) {
+    this->Ucs = uc;
+}
+
+UcList::UcList() {
+
+}
+
+void UcList::removeUC(Uc uni) {
+    Ucs.remove(uni);
 }

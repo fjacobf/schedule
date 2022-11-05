@@ -35,3 +35,11 @@ std::ostream& operator<<(std::ostream& os , const Uc& uc)
 }
 
 Uc::Uc() {}
+
+void Uc::remove(Class aClass) {
+    Classes.remove(aClass);
+}
+
+bool Uc::operator==(const Uc &c) const {
+    return(Uccode == c.getUcCode());
+}

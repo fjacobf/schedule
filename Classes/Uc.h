@@ -17,13 +17,15 @@ private:
 
 public:
     Uc(string uccode);
+    Uc();
     void insertClass(Class classes);
     string getUcCode()const;
     void SetUcCode(string code);
     void eraselist();
     list<Class> getClassesList();
     friend std::ostream& operator<<(std::ostream& os , const Uc& uc);
-    Uc();
+    bool operator==(const Uc &c) const;
+    void remove(Class aClass);
 };
 
 

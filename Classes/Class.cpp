@@ -24,6 +24,10 @@ void Class::setCapacity(int c) {
     capacity = c;
 }
 
+void Class:: incrementCapacity(){
+    capacity++;
+}
+
 void Class::setClassCode(string code) {
     classCode=code;
 }
@@ -40,14 +44,14 @@ void Class::insertTimeSlot(Time_slot timeSlot) {
     time_slots.push_back(timeSlot);
 }
 
-Class::Class(int c, string ucCode, string ClassCode, Time_slot timeSlot) {
-    setCapacity(c);
+Class::Class(string ucCode, string ClassCode, Time_slot timeSlot) {
+    setCapacity(0);
     setUcCode(ucCode);
     setClassCode(ClassCode);
     insertTimeSlot(timeSlot);
 }
-Class::Class(int c, string ucCode, string ClassCode) {
-    setCapacity(c);
+Class::Class(string ucCode, string ClassCode) {
+    setCapacity(0);
     setUcCode(ucCode);
     setClassCode(ClassCode);
 }

@@ -15,7 +15,10 @@ private:
     list<Uc> Ucs;
 
 public:
+    UcList();
+    UcList(list<Uc> uc);
    void addUc(Uc uni);
+   void removeUC(Uc uni);
    bool exists(Uc uni);
     list<Uc> getlist();
     bool equilibrium(string uc);

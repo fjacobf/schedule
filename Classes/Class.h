@@ -35,14 +35,16 @@ public:
     ///Insert a new time_slot with @param time_Slot
     void insertTimeSlot(Time_slot timeSlot);
     /// creates a new class with a @param Time_slot
-    Class(int c, string ucCode, string ClassCode, Time_slot timeSlot);
+    Class(string ucCode, string ClassCode, Time_slot timeSlot);
     /// creates a new class without a Time Slot
-    Class(int c, string ucCode, string ClassCode);
+    Class(string ucCode, string ClassCode);
 
     Class();
 
     /// Operator of equals
     bool operator==(const Class &c) const;
+
+    void incrementCapacity();
 };
 
 

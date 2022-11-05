@@ -40,7 +40,7 @@ Database::Database() {
             ucs.eraselist();
         }
         Time_slot time(content[i][5], stof(content[i][4]), stof(content[i][3]), content[i][2]);
-        Class classe(0, content[i][1], content[i][0], time);
+        Class classe( content[i][1], content[i][0], time);
         if(ucs.getClassesList().size() == 0)
             ucs.insertClass(classe);
         else {
@@ -87,20 +87,25 @@ void Database:: readStudent_classesFile(){
     bool class_exist = false;
     for(int i=1;i<content.size();i++)
     {
-        Class classe(0,content[i][2], content[i][3]);
+        Class classe(content[i][2], content[i][3]);
         bool found = false;
-        for(Uc uc : uclist.getlist()){
-            for(Class c : uc.getClassesList()){
-                if(classe == c) {
-                    classe.setTimeSlots(c.getTimeSlots());
-                    c.setCapacity(c.getCapacity()+1);
+        list<Uc> auxlist = uclist.getlist();
+        for(auto uc : uclist.getlist()){
+            for(auto aux : uc.getClassesList()){
+                if(classe == aux) {
+                    auxlist.remove(uc);
+                    uc.remove(aux);
+                    aux.setTimeSlots(aux.getTimeSlots());
+                    aux.incrementCapacity();
+                    uc.insertClass(aux);
+                    auxlist.push_back(uc);
                     found = true;
                     break;
                 }
             }
-            if(found)
-                break;
+            if(found) break;
         }
+        uclist = UcList(auxlist);
         if(studentsBST.isEmpty()){ //testa se a arvore está vazia
             Student student (stoi(content[i][0]),content[i][1], classe);
             studentsBST.insert(student);
@@ -135,7 +140,6 @@ void Database:: readStudent_classesFile(){
         }
 
     }
-
 }
 
 
