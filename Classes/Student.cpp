@@ -67,6 +67,7 @@ bool Student::operator<(const Student &student) const
     return studentCode < student.getcode();
 }
 
+
 void Student::popClass(Class classe) {
     classes.remove(classe);
 }

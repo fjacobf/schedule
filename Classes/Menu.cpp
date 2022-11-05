@@ -25,7 +25,7 @@ int Menu::displayMenu() {
                 "|==========================|              |============================|  \n"
                 "|      **Ocupation**       |              |      **Student**           |  \n"
                 "|     [11]Per Class        |              | [21]Students List          |  \n"
-                "|     [12]Per Year         |              | [22]Timetable per Student X|  \n"
+                "|     [12]Per Year         |              | [22]Timetable per Student  |  \n"
                 "|     [13]Per UC           |              | [23]Alterations X          |  \n"
                 "|==========================|              |============================|  \n"
                 "|        **UCs**           |              |                            |  \n"
@@ -61,8 +61,10 @@ int Menu::displayMenu() {
                 cin >> key;
                 ocupationSubmenu(3 , key);
                 break;
-            case 21: studentListSubmenu(); break; //TODO Student listing submenu
-            case 22: break; //Timetable per student
+            case 21: studentListSubmenu(); break;
+            case 22://Timetable per student
+                StudentTimetableSubmenu();
+                break;
             case 23:  break; //Alterations submenu
             case 31: break; //Ucs listing
             case 32: break; //Classes per UC
@@ -173,7 +175,7 @@ void Menu:: ocupationSubmenu(int choice, string key){
     }
 }
 
-void Menu::showTimeTable(string a) {
+void Menu::classTimetable(string a) {
     system("cls");
     UcList uclist = database.getuclist();
     for(Uc x : uclist.getlist()){
@@ -181,11 +183,14 @@ void Menu::showTimeTable(string a) {
             if(y.getClassCode() == a) {
                 cout << "Uc: " << y.getUcCode() << "\n";
                 cout << "Capacity: " << y.getCapacity() << "\n";
+                cout << "Timetable\n";
                 for (Time_slot t: y.getTimeSlots()) {
-                    cout << "weekday: " << t.getweekday() << "\n";
-                    cout << "starthour: " << t.getstarthour() << "\n";
-                    cout << "duration: " << t.getduration() << " hours\n";
-                    cout << "type: " << t.gettype() << "\n";
+                    cout << "=============================\n"
+                            "|type: " << t.gettype() << "                    |\n"
+                            "|weekday: " << t.getweekday() << "              |\n"
+                            "|Start hour: " << t.getstarthour() << "         |\n"
+                            "|duration: " << t.getduration() << " hours      |\n"
+                            "=============================\n";
                 }
                 cout << "\n\n\n";
             }
@@ -370,6 +375,48 @@ void Menu::alteration_run() {
             }
         database.set_studentBST(tree);
         Myfile.close();
+    }
+}
+
+
+
+void Menu::StudentTimetableSubmenu() {
+    BST<Student> tree = database.getStudentBST();
+    cout << "How would you like to search for the student?\n"
+            "[1]By Student Code\n"
+            "[2]By Name        \n";
+    while (true) {
+        list<Time_slot> timetable;
+        int code;
+        string name;
+        int choice;
+        cin >> choice;
+        vector<int> values = {1, 2};
+        if (!inputTest(choice, values)) continue;
+
+        if(choice == 1) {
+            cout << "type the code:";
+            cin >> code;
+            Student student = tree.find(Student(code, ""));
+            timetable = student.gettimetable();
+            cout << "==========" << student.getname() << "==========\n";
+        }
+        else {
+            cout << "Type the name:";
+            cin >> name;
+            break;
+        }
+        for (Time_slot t: timetable) {
+            cout << "=============================\n"
+                    "|type: " << t.gettype() << "\n"
+                    "|weekday: " << t.getweekday() << "\n"
+                    "|Start hour: " << t.getstarthour() << "\n"
+                    "|duration: " << t.getduration() << " hours\n"
+                    ;
+        }
+        system("pause");
+        return;
+
     }
 }
 

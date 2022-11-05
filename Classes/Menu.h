@@ -34,6 +34,10 @@ public:
     list<struct Student> studentOrdenationSubmenu(list<Student> studentsList);
 
     void ocupationSubmenu(int choice, string key);
+
+    void classTimetable(string a);
+
+    void StudentTimetableSubmenu();
 };
 
 
