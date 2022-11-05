@@ -29,6 +29,8 @@ public:
 
     void alteration_run();
 
+    void alterationsSubmenu();
+
     list<Time_slot> gettimetable(int code);
 
     list<struct Student> studentOrdenationSubmenu(list<Student> studentsList);

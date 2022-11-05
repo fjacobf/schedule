@@ -26,7 +26,7 @@ int Menu::displayMenu() {
                 "|      **Ocupation**       |              |      **Student**           |  \n"
                 "| [11]Per Class            |              | [21]Students List          |  \n"
                 "| [12]Per Year             |              | [22]Timetable per Student  |  \n"
-                "| [13]Per UC               |              | [23]Alterations X          |  \n"
+                "| [13]Per UC               |              | [23]Alterations            |  \n"
                 "|==========================|              |============================|  \n"
                 "|    **UCs & Classes**     |\n"
                 "| [31]Ucs List             |\n"
@@ -74,6 +74,7 @@ int Menu::displayMenu() {
                 break;
 
             case 23: //Alterations submenu
+                alterationsSubmenu();
                 break;
 
             case 31://Ucs list
@@ -208,6 +209,55 @@ void Menu:: ocupationSubmenu(int choice, string key){
         aux = studentOrdenationSubmenu(aux);
         for(Student &j : aux){ cout << j << "\n";}
         system("pause");
+    }
+}
+
+void Menu:: alterationsSubmenu() {
+    cout << "\n\n"
+            "|=============================|\n"
+            "|         How to list?        |\n"
+            "|     [1]Add in class         |\n"
+            "|     [2]Remove from class    |\n"
+            "|     [3]Change               |\n"
+            "|=============================|\n";
+    //TODO Students with more than n UCs
+    cout << endl;
+    while (true) {
+        string name, UCcode, classCode;
+        int studentCode;
+        Student student;
+        Class classe;
+        cout << "Choose an option:";
+        int choice;
+        cin >> choice;
+        vector<int> values = {1, 2, 3};
+        if (!inputTest(choice, values)) continue;
+        string type;
+        switch (choice) {
+            case 1:
+                type = "add";
+                break;
+            case 2:
+                type = "rem";
+                break;
+            case 3:
+                type = "alt";
+                break;
+        }
+        cout << "Type students name:";
+        cin >> name;
+        cout << "Type students Code:";
+        cin >> studentCode;
+        cout << "Type the UC code:";
+        cin >> UCcode;
+        cout << "Type the class code:";
+        cin >> classCode;
+        student.setname(name);
+        student.setcode(studentCode);
+        classe.setUcCode(UCcode);
+        classe.setClassCode(classCode);
+        alt.push(alteration(student, type, classe));
+        return;
     }
 }
 

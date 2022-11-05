@@ -23,6 +23,7 @@ public:
     string gettype();
     void setclasses(Class aclass);
     alteration(Student student,string type, Class classes);
+    alteration();
 };
 
 
