@@ -1,0 +1,13 @@
+digraph "Menu::classTimetable"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="Menu::classTimetable",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="UcList::getlist",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_uc_list.html#a2a024bfebb5ff7d24c0476093c764258",tooltip=" "];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="Database::getuclist",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_database.html#ab23705a1759b594578d4a1895f71ff02",tooltip=" "];
+}

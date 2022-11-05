@@ -1,0 +1,30 @@
+digraph "Menu::alteration_run"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="Menu::alteration_run",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="UcList::equilibrium",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_uc_list.html#a9d7874b21f854242d201d53b1e57f1cf",tooltip=" "];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="Student::getclasses",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_student.html#a7f040a07896813e615ca41ee4c5d49ec",tooltip=" "];
+  Node1 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="UcList::getlist",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_uc_list.html#a2a024bfebb5ff7d24c0476093c764258",tooltip=" "];
+  Node1 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="Database::getStudentBST",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_database.html#a18f958c2ecd596dfffd1bb75fe8fc064",tooltip=" "];
+  Node1 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="Menu::gettimetable",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_menu.html#a4107dacdd64502240dfedb084b974577",tooltip=" "];
+  Node6 -> Node5 [color="steelblue1",style="solid"];
+  Node6 -> Node7 [color="steelblue1",style="solid"];
+  Node7 [label="Student::gettimetable",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_student.html#a625a651999a647e37014452be2e42bf0",tooltip=" "];
+  Node1 -> Node8 [color="steelblue1",style="solid"];
+  Node8 [label="Database::getuclist",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_database.html#ab23705a1759b594578d4a1895f71ff02",tooltip=" "];
+  Node1 -> Node9 [color="steelblue1",style="solid"];
+  Node9 [label="Student::insertClass",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_student.html#aa66c65d4f149db37a4fdfceb49d4b2f9",tooltip=" "];
+  Node1 -> Node10 [color="steelblue1",style="solid"];
+  Node10 [label="Student::popClass",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_student.html#a1262c1a0a1f01d2fc56a69ea78c7180e",tooltip=" "];
+  Node1 -> Node11 [color="steelblue1",style="solid"];
+  Node11 [label="Database::set_studentBST",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_database.html#ac9be694385251bc28ea63abbcef7a546",tooltip=" "];
+}

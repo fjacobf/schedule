@@ -1,0 +1,8 @@
+digraph "Menu"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="{Menu\n||+ Menu()\l+ displayMenu()\l+ inputTest()\l+ studentListSubmenu()\l+ listStudents()\l+ alteration_run()\l+ alterationsSubmenu()\l+ gettimetable()\l+ studentOrdenationSubmenu()\l+ ocupationSubmenu()\l+ classTimetable()\l+ studentTimetableSubmenu()\l}",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Classe para o menu."];
+}

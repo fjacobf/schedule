@@ -1,0 +1,32 @@
+digraph "BST::isEmpty"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="BST::isEmpty",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="BSTItrIn::BSTItrIn",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_s_t_itr_in.html#a1668d37d94f9934984d58406ca7d0230",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="BSTItrLevel::BSTItrLevel",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_s_t_itr_level.html#a3454308a3a1b75b45fc74855faba30b2",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="BSTItrPost::BSTItrPost",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_s_t_itr_post.html#ad5ce5ac7bfc1ec17c68fcf61ae6fdabe",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node5 [label="BSTItrPre::BSTItrPre",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_b_s_t_itr_pre.html#a13a3eefeda916d6c26e8e2e7a231c10a",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node6 [label="Menu::listStudents",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_menu.html#a33ef85a46cfafe9bf1895e0dab5575cc",tooltip="Recieves an integer that controls how the students will be listed."];
+  Node6 -> Node7 [dir="back",color="steelblue1",style="solid"];
+  Node7 [label="Menu::ocupationSubmenu",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_menu.html#a66bfcd7feed22bffdf67e95cdc187bba",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="steelblue1",style="solid"];
+  Node8 [label="Menu::displayMenu",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_menu.html#a2e196016a6d46cdc46af8749d084dc43",tooltip=" "];
+  Node8 -> Node9 [dir="back",color="steelblue1",style="solid"];
+  Node9 [label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+  Node6 -> Node10 [dir="back",color="steelblue1",style="solid"];
+  Node10 [label="Menu::studentListSubmenu",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_menu.html#ac43c1c1e767f70adbecc90015bd87ade",tooltip="The submenu for option [21]Student List."];
+  Node10 -> Node8 [dir="back",color="steelblue1",style="solid"];
+  Node1 -> Node11 [dir="back",color="steelblue1",style="solid"];
+  Node11 [label="Database::readStudent\l_classesFile",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_database.html#a64927a643944bea370149e976a58c36a",tooltip=" "];
+  Node11 -> Node12 [dir="back",color="steelblue1",style="solid"];
+  Node12 [label="Database::Database",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_database.html#a4703c80e6969d33565ea340f768fdadf",tooltip=" "];
+}

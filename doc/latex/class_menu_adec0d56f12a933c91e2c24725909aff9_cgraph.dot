@@ -1,0 +1,19 @@
+digraph "Menu::alterationsSubmenu"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="Menu::alterationsSubmenu",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="Menu::inputTest",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_menu.html#a45c46b7c959211a176f7c016c1fedd0d",tooltip="Tests if the."];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="Class::setClassCode",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_class.html#a67b1fdcc113bc7ab0c86fb572fc54a27",tooltip="set classCode with"];
+  Node1 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="Student::setcode",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_student.html#a055188589afd04671f5500e125007ff3",tooltip=" "];
+  Node1 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="Student::setname",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_student.html#a631b721fa1276cbb5939944170fa99df",tooltip=" "];
+  Node1 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="Class::setUcCode",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_class.html#a3f70146e4061064a3ec336ce1b13e614",tooltip="set UcCode with"];
+}

@@ -1,0 +1,11 @@
+digraph "Class::insertTimeSlot"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="Class::insertTimeSlot",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Insert a new time_slot with."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="Class::Class",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_class.html#a4803c8624b81bf2b8a2dd0d91616a1c3",tooltip="creates a new class with a"];
+}
