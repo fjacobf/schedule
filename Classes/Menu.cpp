@@ -28,25 +28,26 @@ int Menu::displayMenu() {
                 "| [12]Per Year             |              | [22]Timetable per Student  |  \n"
                 "| [13]Per UC               |              | [23]Alterations            |  \n"
                 "|==========================|              |============================|  \n"
-                "|    **UCs & Classes**     |\n"
-                "| [31]Ucs List             |\n"
-                "| [32]Classes per UC       |\n"
-                "| [33]Class Timetable      |\n"
-                "| [0]Exit                  |\n"
-                "|==========================|\n"
+                "|    **UCs & Classes**     |              |                            |  \n"
+                "| [31]Ucs List             |              |    [0]Exit                 |  \n"
+                "| [32]Classes per UC       |              |    [1]Run Alterations      |  \n"
+                "| [33]Class Timetable      |              |                            |  \n"
+                "|                          |              |                            |  \n"
+                "|==========================|              |============================|  \n";
                 ;
         cout << endl;
         cout << "Choose an option:";
         int choice;
         string key;
         cin >> choice;
-        vector<int> values = {0,11,12,13,21,22,23,31,32,33};
+        vector<int> values = {0,1,11,12,13,21,22,23,31,32,33};
         if(!inputTest(choice,values)) continue;
         switch (choice) {
             case 0:
-                    alteration_run();
                     exit(0);
-
+            case 1:
+                alteration_run();
+                break;
             case 11: //ocupation per class
                     cout << "Type the class:";
                     cin >> key;
