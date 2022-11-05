@@ -106,6 +106,8 @@ const T& BST<T>::find(const T& x) const {
     return elementAt(find(x, root));
 }
 
+
+
 template <class T>
 void BST<T>::makeEmpty( ) {
     makeEmpty(root);
@@ -222,6 +224,7 @@ BinaryNode<T>* BST<T>::find(const T& x, BinaryNode<T>* t) const
     else
         return t;    // Match
 }
+
 
 template <class T>
 void BST<T>::makeEmpty(BinaryNode<T>* & t) const {

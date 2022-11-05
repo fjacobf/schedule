@@ -391,20 +391,28 @@ void Menu::StudentTimetableSubmenu() {
         string name;
         int choice;
         cin >> choice;
+        Student student;
         vector<int> values = {1, 2};
         if (!inputTest(choice, values)) continue;
 
         if(choice == 1) {
             cout << "type the code:";
             cin >> code;
-            Student student = tree.find(Student(code, ""));
+            student = tree.find(Student(code, ""));
             timetable = student.gettimetable();
             cout << "==========" << student.getname() << "==========\n";
         }
         else {
             cout << "Type the name:";
             cin >> name;
-            break;
+            for(auto i = tree.begin(); i!=tree.end(); i++){
+                student = *i;
+                if(student.getname()==name){
+                    timetable = student.gettimetable();
+                    break;
+                }
+            }
+            cout << "==========" << student.getcode() << "==========\n";
         }
         for (Time_slot t: timetable) {
             cout << "=============================\n"
@@ -416,7 +424,6 @@ void Menu::StudentTimetableSubmenu() {
         }
         system("pause");
         return;
-
     }
 }
 

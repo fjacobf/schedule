@@ -43,6 +43,7 @@ public:
 
     bool operator<(const Student &student) const;
 
+
     friend std::ostream& operator<<(std::ostream& os , const Student& student);
 
     list<Time_slot> gettimetable();
