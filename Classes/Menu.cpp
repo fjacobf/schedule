@@ -9,7 +9,7 @@ using namespace std;
 Menu::Menu() {}
 int Menu::displayMenu() {
     while(true) {
-        cout << string(100,'\n');
+        cout << string(50,'\n');
         cout <<
                 "=====================================================================\n"
                 " .d8888b.           888                    888          888          \n"
@@ -24,15 +24,16 @@ int Menu::displayMenu() {
                 "=====================================================================\n"
                 "|==========================|              |============================|  \n"
                 "|      **Ocupation**       |              |      **Student**           |  \n"
-                "|     [11]Per Class        |              | [21]Students List          |  \n"
-                "|     [12]Per Year         |              | [22]Timetable per Student  |  \n"
-                "|     [13]Per UC           |              | [23]Alterations X          |  \n"
+                "| [11]Per Class            |              | [21]Students List          |  \n"
+                "| [12]Per Year             |              | [22]Timetable per Student  |  \n"
+                "| [13]Per UC               |              | [23]Alterations X          |  \n"
                 "|==========================|              |============================|  \n"
-                "|        **UCs**           |              |                            |  \n"
-                "|     [31]Ucs Listing  X   |              | [0]Exit                    |  \n"
-                "|     [32]Classes per UC X |              |                            |  \n"
-                "|                          |              |                            |  \n"
-                "|==========================|              |============================|  \n"
+                "|    **UCs & Classes**     |\n"
+                "| [31]Ucs List             |\n"
+                "| [32]Classes per UC       |\n"
+                "| [33]Class Timetable      |\n"
+                "| [0]Exit                  |\n"
+                "|==========================|\n"
                 ;
         cout << endl;
         cout << "Choose an option:";
@@ -42,32 +43,66 @@ int Menu::displayMenu() {
         vector<int> values = {0,11,12,13,21,22,23,31,32,33};
         if(!inputTest(choice,values)) continue;
         switch (choice) {
-            case 0: {
-                alteration_run();
-                exit(0);
-            }
+            case 0:
+                    alteration_run();
+                    exit(0);
+
             case 11: //ocupation per class
+                    cout << "Type the class:";
+                    cin >> key;
+                    ocupationSubmenu(2 , key);
+                    break;
+
+            case 12://ocupation per year
+                    cout << "Type the year:";
+                    cin >> key;
+                    ocupationSubmenu(4 , key);
+                    break;
+
+            case 13://ocupation per uc
+                    cout << "Type the uc:";
+                    cin >> key;
+                    ocupationSubmenu(3 , key);
+                    break;
+
+            case 21://Student List
+                studentListSubmenu();
+                break;
+
+            case 22://Timetable per student
+                studentTimetableSubmenu();
+                break;
+
+            case 23: //Alterations submenu
+                break;
+
+            case 31://Ucs list
+                for (auto i : database.getuclist().getlist()){
+                    cout << i << "\n";
+                }
+                system("pause");
+                break;
+
+            case 32://Classes per UC
+                cout << "Type the UC:";
+                cin >> key;
+                for (auto i : database.getuclist().getlist()){
+                    if (i.getUcCode() == key){
+                        for(auto j : i.getClassesList()){
+                            cout << j.getClassCode()<<"\n";
+                        }
+                        break;
+                    }
+                }
+                system("pause");
+                break;
+
+            case 33: //Class timetable
                 cout << "Type the class:";
                 cin >> key;
-                ocupationSubmenu(2 , key);
+                classTimetable(key);
+                system("pause");
                 break;
-            case 12://ocupation per year
-                cout << "Type the year:";
-                cin >> key;
-                ocupationSubmenu(4 , key);
-                break;
-            case 13://ocupation per uc
-                cout << "Type the uc:";
-                cin >> key;
-                ocupationSubmenu(3 , key);
-                break;
-            case 21: studentListSubmenu(); break;
-            case 22://Timetable per student
-                StudentTimetableSubmenu();
-                break;
-            case 23:  break; //Alterations submenu
-            case 31: break; //Ucs listing
-            case 32: break; //Classes per UC
         }
     }
 }
@@ -82,6 +117,7 @@ void Menu:: studentListSubmenu() {
                 "|     [4]List per year        |\n"
                 "|     [0]Exit                 |\n"
                 "|=============================|\n";
+        //TODO Students with more than n UCs
     cout << endl;
     while (true){
         cout << "Choose an option:";
@@ -181,18 +217,20 @@ void Menu::classTimetable(string a) {
     for(Uc x : uclist.getlist()){
         for(Class y : x.getClassesList()){
             if(y.getClassCode() == a) {
-                cout << "Uc: " << y.getUcCode() << "\n";
-                cout << "Capacity: " << y.getCapacity() << "\n";
-                cout << "Timetable\n";
+                cout << "|-------------\n";
+                cout << "|Uc: " << y.getUcCode() << "\n";
+                cout << "|Capacity: " << y.getCapacity() << "\n";
+                cout << "|Timetable\n";
+                cout << "|-------------\n";
                 for (Time_slot t: y.getTimeSlots()) {
                     cout << "=============================\n"
-                            "|type: " << t.gettype() << "                    |\n"
-                            "|weekday: " << t.getweekday() << "              |\n"
-                            "|Start hour: " << t.getstarthour() << "         |\n"
-                            "|duration: " << t.getduration() << " hours      |\n"
+                            "|type: " << t.gettype() << "                    \n"
+                            "|weekday: " << t.getweekday() << "              \n"
+                            "|Start hour: " << t.getstarthour() << "         \n"
+                            "|duration: " << t.getduration() << " hours      \n"
                             "=============================\n";
                 }
-                cout << "\n\n\n";
+                cout << "\n\n";
             }
         }
     }
@@ -380,7 +418,7 @@ void Menu::alteration_run() {
 
 
 
-void Menu::StudentTimetableSubmenu() {
+void Menu::studentTimetableSubmenu() {
     BST<Student> tree = database.getStudentBST();
     cout << "How would you like to search for the student?\n"
             "[1]By Student Code\n"

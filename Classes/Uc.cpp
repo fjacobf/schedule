@@ -28,4 +28,10 @@ list<Class> Uc::getClassesList() {
     return Classes;
 }
 
+std::ostream& operator<<(std::ostream& os , const Uc& uc)
+{
+    os << uc.getUcCode();
+    return os;
+}
+
 Uc::Uc() {}

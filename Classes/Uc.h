@@ -22,7 +22,7 @@ public:
     void SetUcCode(string code);
     void eraselist();
     list<Class> getClassesList();
-
+    friend std::ostream& operator<<(std::ostream& os , const Uc& uc);
     Uc();
 };
 

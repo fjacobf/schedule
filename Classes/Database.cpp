@@ -43,7 +43,7 @@ Database::Database() {
         Class classe(0, content[i][1], content[i][0], time);
         if(ucs.getClassesList().size() == 0)
             ucs.insertClass(classe);
-        else {                     //TODO alterar para busca binaria
+        else {
             for(Class x : ucs.getClassesList()){
                 if(x.getClassCode() == classe.getClassCode() && x.getUcCode() == classe.getUcCode()){
                     x.insertTimeSlot(time);

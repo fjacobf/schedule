@@ -37,7 +37,7 @@ public:
 
     void classTimetable(string a);
 
-    void StudentTimetableSubmenu();
+    void studentTimetableSubmenu();
 };
 
 
